@@ -1,12 +1,10 @@
 package vibe.admin.tests;
 
-import org.openqa.selenium.By.ByCssSelector;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import common.Priority;
 import common.SocialNetWorksMethods;
-import common.TestBase;
 import common.EnvProperties;
 import vibe.calendar2.tests.CalendarMethods;
 import vibe.contacts2.tests.BusinessContactsMethods;
