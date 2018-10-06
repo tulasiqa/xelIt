@@ -1,0 +1,105 @@
+2018-08-21 13:42:32,912 INFO  [Logger] inside login() method 
+2018-08-21 13:42:32,927 INFO  [Logger] inside logIn method. 
+2018-08-21 13:42:39,848 INFO  [Logger]  element is present 
+2018-08-21 13:42:40,080 INFO  [Logger]  element is present 
+2018-08-21 13:43:30,143 INFO  [Logger] inside login() method 
+2018-08-21 13:43:30,158 INFO  [Logger] inside logIn method. 
+2018-08-21 13:43:36,668 INFO  [Logger]  element is present 
+2018-08-21 13:43:36,715 INFO  [Logger]  element is present 
+2018-08-21 13:43:36,766 INFO  [Logger] Failed!! Unable to enter a text into a textbox.//*[@id='user_login'] 
+2018-08-21 13:43:44,100 INFO  [Logger] inside login() method 
+2018-08-21 13:43:44,113 INFO  [Logger] inside logIn method. 
+2018-08-21 13:43:46,167 INFO  [Logger]  element is present 
+2018-08-21 13:43:46,203 INFO  [Logger]  element is present 
+2018-08-21 13:43:46,230 INFO  [Logger] Failed!! Unable to enter a text into a textbox.//*[@id='user_login'] 
+2018-08-21 13:43:53,673 INFO  [Logger] Entered into createEcardCategory() test 
+2018-08-21 13:43:53,689 INFO  [Logger] Entered into nav2AdminEcard() method 
+2018-08-21 13:43:58,042 INFO  [Logger] Entered into addEcardCategory() method  
+2018-08-21 13:43:58,052 INFO  [Logger] Entered into listOfPanelTitles() method  
+2018-08-21 13:46:13,235 INFO  [Logger] inside login() method 
+2018-08-21 13:46:13,252 INFO  [Logger] inside logIn method. 
+2018-08-21 13:46:19,556 INFO  [Logger]  element is present 
+2018-08-21 13:46:19,598 INFO  [Logger]  element is present 
+2018-08-21 13:47:46,895 INFO  [Logger] Failed!! Unable to capture confirmation message 
+2018-08-21 13:47:46,909 INFO  [Logger] Entered into createEcardCategory() test 
+2018-08-21 13:47:46,927 INFO  [Logger] Entered into nav2AdminEcard() method 
+2018-08-21 13:47:53,925 INFO  [Logger] Entered into addEcardCategory() method  
+2018-08-21 13:47:53,940 INFO  [Logger] Entered into listOfPanelTitles() method  
+2018-08-21 13:47:56,760 INFO  [Logger] Failed!! Unable to wait on this element div > div.col-md-6.text-right > a:nth-child(1) 
+2018-08-21 13:47:56,793 INFO  [Logger] Failed!! Unable to click on a button.div > div.col-md-6.text-right > a:nth-child(1) 
+2018-08-21 13:48:09,833 INFO  [Logger] Failed!! Unable to wait on this element input#pyr_crm_ecard_category_category_name 
+2018-08-21 13:48:19,897 INFO  [Logger] Failed!! Unable to wait on this element input#pyr_crm_ecard_category_category_name 
+2018-08-21 13:48:29,963 INFO  [Logger] Failed!! Unable to wait on this element input#pyr_crm_ecard_category_category_name 
+2018-08-21 13:48:40,007 INFO  [Logger] Failed!! Unable to enter a text into a textbox.input#pyr_crm_ecard_category_category_name 
+2018-08-21 13:48:50,067 INFO  [Logger] Failed!! Required option is not available or not select drop down listselect#pyr_crm_ecard_category_parent_category_id 
+2018-08-21 13:49:00,097 INFO  [Logger] Failed!! Unable to wait on this element #new_pyr_crm_ecard_category > div.actions > input 
+2018-08-21 13:49:10,134 INFO  [Logger] Failed!! Unable to click on a button.#new_pyr_crm_ecard_category > div.actions > input 
+2018-08-21 13:49:10,151 INFO  [Logger] inside waitOnSpinner() method 
+2018-08-21 13:49:20,213 INFO  [Logger] Failed!! Unable to wait on this element //*[@id='spinner-container'][@display='none'] 
+2018-08-21 13:49:34,278 INFO  [Logger] Failed!! Unable to capture confirmation message 
+2018-08-21 13:49:34,284 INFO  [Logger] Entered into nav2AdminEcard() method 
+2018-08-21 13:49:38,943 INFO  [Logger] Entered into addEcardCategory() method  
+2018-08-21 13:49:38,960 INFO  [Logger] Entered into listOfPanelTitles() method  
+2018-08-21 13:49:41,610 INFO  [Logger] Failed!! Unable to wait on this element div > div.col-md-6.text-right > a:nth-child(1) 
+2018-08-21 13:49:41,636 INFO  [Logger] Failed!! Unable to click on a button.div > div.col-md-6.text-right > a:nth-child(1) 
+2018-08-21 13:49:54,689 INFO  [Logger] Failed!! Unable to wait on this element input#pyr_crm_ecard_category_category_name 
+2018-08-21 13:50:04,737 INFO  [Logger] Failed!! Unable to wait on this element input#pyr_crm_ecard_category_category_name 
+2018-08-21 13:50:14,805 INFO  [Logger] Failed!! Unable to wait on this element input#pyr_crm_ecard_category_category_name 
+2018-08-21 13:50:24,861 INFO  [Logger] Failed!! Unable to enter a text into a textbox.input#pyr_crm_ecard_category_category_name 
+2018-08-21 13:50:34,908 INFO  [Logger] Failed!! Required option is not available or not select drop down listselect#pyr_crm_ecard_category_parent_category_id 
+2018-08-21 13:50:44,956 INFO  [Logger] Failed!! Unable to wait on this element #new_pyr_crm_ecard_category > div.actions > input 
+2018-08-21 13:50:55,028 INFO  [Logger] Failed!! Unable to click on a button.#new_pyr_crm_ecard_category > div.actions > input 
+2018-08-21 13:50:55,037 INFO  [Logger] inside waitOnSpinner() method 
+2018-08-21 13:51:05,072 INFO  [Logger] Failed!! Unable to wait on this element //*[@id='spinner-container'][@display='none'] 
+2018-08-21 13:51:19,130 INFO  [Logger] Failed!! Unable to capture confirmation message 
+2018-08-21 13:51:19,139 INFO  [Logger] Entered into validateCategories() method  
+2018-08-21 13:51:19,145 INFO  [Logger] Entered into nav2EcardCategories() method 
+2018-08-21 13:51:19,158 INFO  [Logger] Entered into nav2AdminEcard() method 
+2018-08-21 13:51:23,596 INFO  [Logger] Entered into listOfPanelTitles() method  
+2018-08-21 13:51:26,731 INFO  [Logger] Entered into createEcardCategory() test 
+2018-08-21 13:51:26,737 INFO  [Logger] Entered into nav2AdminEcard() method 
+2018-08-21 13:51:31,219 INFO  [Logger] Entered into addEcardCategory() method  
+2018-08-21 13:51:31,232 INFO  [Logger] Entered into listOfPanelTitles() method  
+2018-08-21 13:51:33,657 INFO  [Logger] Failed!! Unable to wait on this element div > div.col-md-6.text-right > a:nth-child(1) 
+2018-08-21 13:51:33,683 INFO  [Logger] Failed!! Unable to click on a button.div > div.col-md-6.text-right > a:nth-child(1) 
+2018-08-21 13:51:46,737 INFO  [Logger] Failed!! Unable to wait on this element input#pyr_crm_ecard_category_category_name 
+2018-08-21 13:51:56,783 INFO  [Logger] Failed!! Unable to wait on this element input#pyr_crm_ecard_category_category_name 
+2018-08-21 13:52:06,826 INFO  [Logger] Failed!! Unable to wait on this element input#pyr_crm_ecard_category_category_name 
+2018-08-21 13:52:16,867 INFO  [Logger] Failed!! Unable to enter a text into a textbox.input#pyr_crm_ecard_category_category_name 
+2018-08-21 13:52:26,924 INFO  [Logger] Failed!! Required option is not available or not select drop down listselect#pyr_crm_ecard_category_parent_category_id 
+2018-08-21 13:52:36,971 INFO  [Logger] Failed!! Unable to wait on this element #new_pyr_crm_ecard_category > div.actions > input 
+2018-08-21 13:52:47,042 INFO  [Logger] Failed!! Unable to click on a button.#new_pyr_crm_ecard_category > div.actions > input 
+2018-08-21 13:52:47,046 INFO  [Logger] inside waitOnSpinner() method 
+2018-08-21 13:52:57,084 INFO  [Logger] Failed!! Unable to wait on this element //*[@id='spinner-container'][@display='none'] 
+2018-08-21 13:53:11,136 INFO  [Logger] Failed!! Unable to capture confirmation message 
+2018-08-21 13:53:11,144 INFO  [Logger] Entered into nav2AdminEcard() method 
+2018-08-21 13:53:16,172 INFO  [Logger] Entered into addEcardCategory() method  
+2018-08-21 13:53:16,183 INFO  [Logger] Entered into listOfPanelTitles() method  
+2018-08-21 13:53:18,816 INFO  [Logger] Failed!! Unable to wait on this element div > div.col-md-6.text-right > a:nth-child(1) 
+2018-08-21 13:53:18,838 INFO  [Logger] Failed!! Unable to click on a button.div > div.col-md-6.text-right > a:nth-child(1) 
+2018-08-21 13:53:31,885 INFO  [Logger] Failed!! Unable to wait on this element input#pyr_crm_ecard_category_category_name 
+2018-08-21 13:53:41,935 INFO  [Logger] Failed!! Unable to wait on this element input#pyr_crm_ecard_category_category_name 
+2018-08-21 13:53:51,964 INFO  [Logger] Failed!! Unable to wait on this element input#pyr_crm_ecard_category_category_name 
+2018-08-21 13:54:02,026 INFO  [Logger] Failed!! Unable to enter a text into a textbox.input#pyr_crm_ecard_category_category_name 
+2018-08-21 13:54:12,070 INFO  [Logger] Failed!! Required option is not available or not select drop down listselect#pyr_crm_ecard_category_parent_category_id 
+2018-08-21 13:54:22,111 INFO  [Logger] Failed!! Unable to wait on this element #new_pyr_crm_ecard_category > div.actions > input 
+2018-08-21 13:54:32,186 INFO  [Logger] Failed!! Unable to click on a button.#new_pyr_crm_ecard_category > div.actions > input 
+2018-08-21 13:54:32,193 INFO  [Logger] inside waitOnSpinner() method 
+2018-08-21 13:54:42,237 INFO  [Logger] Failed!! Unable to wait on this element //*[@id='spinner-container'][@display='none'] 
+2018-08-21 13:54:56,292 INFO  [Logger] Failed!! Unable to capture confirmation message 
+2018-08-21 13:54:56,301 INFO  [Logger] Entered into validateCategories() method  
+2018-08-21 13:54:56,305 INFO  [Logger] Entered into nav2EcardCategories() method 
+2018-08-21 13:54:56,310 INFO  [Logger] Entered into nav2AdminEcard() method 
+2018-08-21 13:55:00,773 INFO  [Logger] Entered into listOfPanelTitles() method  
+2018-08-22 15:46:08,477 INFO  [Logger] inside login() method 
+2018-08-22 15:46:08,477 INFO  [Logger] inside login() method 
+2018-08-22 15:46:08,493 INFO  [Logger] inside logIn method. 
+2018-08-22 15:46:08,493 INFO  [Logger] inside logIn method. 
+2018-08-22 15:46:09,934 INFO  [Logger] inside login() method 
+2018-08-22 15:46:09,950 INFO  [Logger] inside logIn method. 
+2018-08-22 15:46:18,584 INFO  [Logger]  element is present 
+2018-08-22 15:46:18,771 INFO  [Logger]  element is present 
+2018-08-22 15:46:18,803 INFO  [Logger]  element is present 
+2018-08-22 15:46:19,005 INFO  [Logger]  element is present 
+2018-08-22 15:46:20,459 INFO  [Logger]  element is present 
+2018-08-22 15:46:20,522 INFO  [Logger]  element is present 
