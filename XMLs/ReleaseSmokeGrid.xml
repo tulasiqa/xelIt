@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+
+<suite name="SmokeSuiteMaster" parallel="tests">
+	<parameter name="browser" value="firefox" />
+	<parameter name="appUrl" value="http://release.vibeoffice.com/" />
+
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+		<listener class-name="common.ExtentReportNG" />
+		<listener class-name="common.TestNGCustomReportListener" />
+		<listener class-name="common.RetryListener"></listener>
+	</listeners>
+
+
+	<test name="FirefoxTest1">
+		<parameter name="browser" value="firefox" />
+		<parameter name="appUrl" value="http://release.vibeoffice.com/" />
+		
+		
+		
+		<classes>
+			<class name="common.DriverInitializerGrid" />
+			<class name="common.LoginCredentials" />
+			
+			<class name="vibe.admin.tests.AdminLinks"/>
+
+			<class name="vibe.admin.tests.AdminCommunity">
+	        	<methods>
+			          <include name="FeatureCommunityPhoto"></include>
+			          <include name="FeatureCommunityVideo"></include>
+			          <include name="FeatureCommunityBlog"></include>
+	       		 </methods>
+      		</class>
+
+			<class name="vibe.admin.tests.AdminTasks">
+				<methods>		
+					<include name="enableAllTasksWidgets"></include>
+				</methods>
+			</class>
+			
+			<class name="vibe.admin.tests.AdminTraining">
+				<methods>
+					<include name="AddSingleTrainingSeries"></include>
+				</methods>
+			</class>
+
+			<class name="vibe.admin.tests.AdminContacts">
+				<methods>
+					<include name="createCallScripTest"></include>
+				</methods>
+			</class>
+			
+				<class name="vibe.billing.tests.BillingTests1">
+				<methods>
+					<include name="EnableBillingUsers"></include>
+					<include name="UpgradeFromLiteMonthly2LiteYearly"></include>
+					<include name="VerifySubFromLiteMonthly2LiteYearlyAdmin"></include>
+					<include name="UpgradeFromLiteMonthly2ProMonthly"></include>
+					<include name="VerifySubFromLiteMonthly2ProMonthlyAdmin"></include>
+					<include name="DowngradeFromProYearly2ProMonthly"></include>
+					<include name="VerifySubFromProYearly2ProMonthlyAdmin"></include>
+					<include name="DowngradeFromProYearly2LiteYearly"></include>
+					<include name="VerifySubFromProYearly2LiteYearlyAdmin"></include>
+				</methods>
+			</class>
+
+			<class name="common.UserLogin" />
+			
+			<!--  <class name="vibe.enrollment.tests.ReleaseEnrollmentTests">
+		        <methods>
+		              <include name="EnrollMPUser"></include>
+		              <include name="EnrollVIPUser"></include> 
+		              <include name="EnrollRetialUser"></include> 
+		        </methods>
+      		</class> -->
+			
+			<class name="vibe.setting.tests.SettingsTests">
+				<methods>
+					<include name="UpdateLanguageSettings"></include>
+					<include name="UpdateReportSettings"></include>
+				</methods>
+			</class>
+			
+			<class name="vibe.training.tests.TrainingTests">
+				<methods>
+					<include name="CompleteSingleTraining"></include> 
+	           	</methods>
+			</class>
+
+		
+			<class name="vibe.mycommunity.tests.CommunityTests">
+				<methods>
+					<include name="AddPhotoInCommunity"></include>
+					<include name="EditPhotoInCommunity"></include>
+					<include name="DeletePhotoInCommunity"></include>
+					<include name="AddCommunityPhotoWithURL"></include>
+					<include name="FilterCommunityPhotos"></include>
+					<include name="LikeCommunityPhoto"></include>
+					<include name="CommentCommunityPhoto"></include>
+					<include name="EditCommentOnCommunityPhoto"></include>
+					<include name="DeleteCommentOnCommunityPhoto"></include>
+					<include name="SharePhotoInFacebook"></include>
+					<include name="SharePhotoInTwitter"></include>
+					<include name="HideCommunityPhoto"></include>
+					<include name="AddVideoInCommunity"></include>
+					<include name="EditVideoInCommunity"></include>
+					<include name="FilterCommunityVideos"></include>
+					<include name="DeleteVideoInCommunity"></include>
+					<include name="AddBlogInCommunity"></include>
+					<include name="EditBlogInCommunity"></include>
+					<include name="DeleteBlogInCommunity"></include>
+					<include name="DraftCommunityBlog"></include>
+					<include name="EditDraftCommunityBlog"></include>
+					<include name="DeleteDraftCommunityBlog"></include>
+					<include name="AddStatusInCommunity"></include>
+					<include name="FilterCommunityStatuses"></include>
+					<include name="HideCommunityStatus"></include>			
+				</methods>
+	  		</class>
+
+			<class name="vibe.tasks2.tests.TasksTests">
+				<methods>
+					<include name="AddTodaysDateTasks"></include>
+					<include name="AddFutureDateTasks"></include>
+					<include name="MarkTaskAsComplete"></include>
+					<include name="MarkTaskAsIncomplete"></include>
+				</methods>
+			</class>
+
+			<class name="vibe.contacts2.tests.BusinessContactsTests">
+				<methods>
+					<include name="addBusinessContact"></include>
+					<include name="searchBussinesContact"></include>
+					<include name="addCallScripts2BusinessContact"></include>
+					<include name="addNotes2BusinessContact"></include>
+					<include name="sendMesg2BusinessContact"></include>
+					<include name="setAppoinment2BusinessContact"></include>
+					<include name="createTask4BusinessContact"></include>
+					<include name="addGroup"></include>
+					<include name="renameGroup"></include>
+					<include name="addContacts2Group"></include>
+					<include name="addGroupContacts2AnotherGroup"></include>
+					<include name="email2SelectedContactsFromManageGroup"></include>
+					<include name="deleteSelectedContactsFromManageGroup"></include>
+					<include name="deletBusinessContact"></include>
+					<include name="deleteGroup"></include>
+				</methods>
+			</class>
+
+			<class name="common.UserLogout" />
+			
+			<class name="vibe.teardown.tests.AdminTeardownTraining">
+				<methods>
+					<include name="DeleteTrainingCategory"></include>
+				</methods>
+	  		</class>
+	  		
+			<class name="vibe.teardown.tests.AdminTeardownContacts">
+				<methods>
+					<include name="deleteCallScripTest"></include>
+				</methods>
+			</class>
+			
+			
+
+		</classes>
+	</test>
+
+
+
+
+	<test name="FirefoxTest2">
+		<parameter name="browser" value="firefox" />
+		<parameter name="appUrl" value="http://release.vibeoffice.com/" />
+		<classes>
+			<class name="common.DriverInitializerGrid" />
+			<class name="common.LoginCredentials" />
+
+
+			<class name="vibe.admin.tests.AdminMarYouTube">
+				<methods>
+					<include name="youTubeVideoUpload"></include>
+					<include name="youTubevideoUpdateDetails"></include>
+				</methods>
+			</class>
+
+			<class name="vibe.admin.tests.AdminCalendar2">
+				<methods>
+					<include name="createCorpCalendarEvent"></include>
+					<include name="searchCorpCalendarEvent"></include>
+					<include name="updateCorpCalendarEvent"></include>
+				</methods>
+			</class>
+
+			<class name="vibe.admin.tests.AdminMarNews">
+				<methods>
+					<include name="createCompanyNews"></include>
+					<include name="unPublishAndVerifyNews"></include>
+					<include name="updateNewsAndUsersSubscriptions"></include>
+					<include name="createNewsWithSubscriber2"></include>
+				</methods>
+			</class>
+
+			<class name="vibe.admin.tests.AdminMarAds">
+				<methods>
+					<include name="createNewAds"></include>
+				</methods>
+			</class>
+			<class name="common.UserLogin" />
+		
+	
+			<class name="vibe.calendar2.tests.CalendarTests">
+				<methods>
+					<include name="verifyCorpCalendarEvent"></include>
+					<include name="CreateNewCalendarEvent"></include>
+					<include name="SearchCalendarEvent"></include>
+					<include name="UpdateCalendarEvent"></include>
+					<include name="DeleteCalendarEvent"></include>
+					<include name="CreateRepeatCalendarEvent"></include>
+					<include name="SearchRepeatCalendarEvent"></include>
+					<include name="UpdateRepeatCalendarEvent"></include>
+					<include name="DeleteRepeatCalendarEventSingleInstance"></include>
+					<include name="DeleteRepeatCalendarEventAllEventsInSeries"></include>
+					<include name="createANewYourCalendarType"></include>
+					<include name="SelectYourCalendarType"></include>
+					<include name="AddANewEventToYourCalenadarEvent"></include>
+					<include name="DeleteCalendarTypeAssociateWithEventAndValidate"></include>
+					<include name="editYourCalendarType"></include>
+					<include name="deleteYourCalendarType"></include>
+				</methods>
+			</class>
+
+			<class name="vibe.marketing.companyNews.tests.NewsTests">
+				<methods>
+					<include name="validateMonthlyNewswithBothSubscribers"></include>
+					<include name="verifyYearlyNewswithYearlyNdMonthlyUsers"></include>
+				</methods>
+			</class>
+
+
+			<class name="common.UserLogout" />
+
+
+			<class name="vibe.teardown.tests.AdminTearDownMarkYouTube">
+				<methods>
+					<include name="deleteYoutube"></include>
+				</methods>
+			</class>
+
+			<class name="vibe.teardown.tests.AdminTeardownCalendar2">
+				<methods>
+					<include name="deleteCorpCalendarEvent"></include>
+				</methods>
+			</class>
+
+			<class name="vibe.teardown.tests.AdminTearDownMarkNews">
+				<methods>
+					<include name="deleteUnPublishedNews"></include>
+					<include name="deletePublishedNews"></include>
+					<include name="deleteSubscriber2News"></include>					
+				</methods>
+			</class>
+
+			<class name="vibe.teardown.tests.AdminTearDownMarkAds">
+				<methods>
+					<include name="deleteAds"></include>
+				</methods>
+			</class>
+
+
+		</classes>
+	</test>
+
+
+
+	<test name="FirefoxTest3">
+		<parameter name="browser" value="firefox" />
+		<parameter name="appUrl" value="http://release.vibeoffice.com/" />
+		<classes>
+			<class name="common.DriverInitializerGrid" />
+			<class name="common.LoginCredentials" />
+
+
+
+		 <class name="vibe.admin.tests.AdminResourceLibrary3">
+				<methods>
+					<exclude name="DisableResourceOptionsAndVerifyOnUserSide"></exclude>
+					<exclude name="enableResourceOptions"></exclude>
+
+				</methods>
+
+			</class> 
+
+			<class name="vibe.admin.tests.AdminWidgets">
+				<methods>
+					<include name="enableActionItemWidget"></include>
+				</methods>
+			</class>
+
+			<class name="vibe.admin.tests.AdminEcard">
+				<methods>
+					<include name="createEcardCategory"></include>
+					<include name="createNewEcard"></include>
+				</methods>
+			</class>
+
+			<class name="vibe.admin.tests.AdminFaq" />
+			 <class name="vibe.admin.tests.AdminInappropriateWords">
+		      <methods>
+			      <include name="ViewInappropriateWords"></include>
+			      <include name="AddInappropriateWord"></include>
+			      <include name="ViewReservedWords"></include>
+			      <include name="AddReservedWord"></include>
+			      <include name="VerifyInappropriateWordInTraining"></include>
+			      <include name="SearchAllWords"></include>
+			      <include name="ViewMaskedContent"></include>
+			      <include name="UpdateMaskedContent"></include>
+		      </methods>
+      		</class>
+
+			<class name="vibe.widgets.tests.WidgetsTests">
+				<methods>
+					<include name="verifyActionItemsWidget"></include>
+				</methods>
+			</class>
+			<class name="common.UserLogin" />
+
+
+				<class name="vibe.resourcelibrary3.tests.RL3Tests">
+				<methods>
+					<exclude name="ShareResourceAsset2PWP"></exclude>
+						<exclude name="ShareResourceAsset2Community"></exclude>
+					<exclude name="ShareResourceAsset2Email"></exclude>
+					<exclude name="SelectAllAssetsAndSendBulkEmail"></exclude>
+				</methods>
+			</class> 
+
+  <class name ="vibe.content.inappropriate.tests.InappropriateTests"/>
+  
+			<class name="vibe.feedBack.tests.FeedBackTests">
+        <methods>
+         	 <include name="verifyFeedbackLinkInAllScreens"></include>
+			 <include name="validateCommentedTicketAndDelete"></include>
+			 <include name="editCommentedTicket"></include>	
+        </methods>
+      </class>
+
+
+			<class name="vibe.ecards.tests.EcardTests">
+				<methods>
+					<include name="verifyExistingEcardcategory"></include>
+					<include name="createNdVerifySavedEcard"></include>
+					<include name="sendEcardByMail"></include>
+					<include name="ecardHistory"></include>
+					<include name="deleteSavedCard"></include>
+				</methods>
+			</class>
+
+			<class name="vibe.faq.tests.FaqTests" />
+
+			<class name="vibe.myprofile.tests.MyProfileTests">
+				<methods>
+					<include name="AddPhotoInProfile"></include>
+					<include name="EditPhotoInProfile"></include>
+					<include name="DeletePhotoInProfile"></include>
+					<include name="AddProfilePhotoWithURL"></include>
+					<include name="AddVideoInProfile"></include>
+					<include name="EditVideoInProfile"></include>
+					<include name="DeleteVideoInProfile"></include>
+					<include name="AddProfileBlog"></include>
+					<include name="EditProfileBlog"></include>
+					<include name="DeleteProfileBlog"></include>
+					<include name="DraftProfileBlog"></include>
+					<include name="ChangeProfilePhoto"></include>
+					<include name="ChangeCoverPhoto"></include>
+				</methods>
+			</class>
+
+			<class name="vibe.widgets.tests.WidgetsTests">
+				<methods>
+					<include name="verifyActionItemsWidget"></include>
+				</methods>
+			</class>
+
+			<class name="vibe.inbox.tests.InboxTests">
+		  		<methods>
+			       	<include name="SendEmailFromGmail"></include> 
+			   		<include name="SendEmail2GmailUsers"></include>
+			   		<include name="SetEmailLabel"></include> 
+			   		<include name="SendEmail2otherVibeUser"></include> 
+			   		<include name="DeleteEmail2Trash"></include> 
+			   		<include name="UndeleteEmailFromTrash"></include> 
+			   		<include name="DeleteEmailForEver"></include> 
+			   		 	  
+			   		<include name="CreateEmailSignature"></include> 
+			        <include name="MarkSignatureAsDefault"></include> 
+			        <include name="ComposeEmailWithDefaultSignature"></include> 
+			        <include name="DeleteEmailSignature"></include> 
+			    		
+			    	<include name="CreateEmailTemplate"></include> 
+			    	<include name="DeleteEmailTemplate"></include> 
+			    	<include name="ManageEmailTemplate"></include> 
+		     </methods>
+		 </class>    
+			
+
+			<class name="vibe.Notifications.tests.NotificationTests">
+				<methods>
+					<include name="verifyTitlesCountsInNotification" />					
+				</methods>
+			</class>
+
+
+			<class name="vibe.mywebsite.tests.MyWebsiteTests">
+				<methods>
+					<include name="addWebsite"></include>
+					<include name="manageWebsite"></include>
+					<include name="verifyDefaultWebsiteAvailable"></include>
+				</methods>
+			</class>
+
+			<class name="vibe.chat.tests.ChatTests">
+				<methods>
+					<include name="verifyQuickChat"></include>
+				</methods>
+			</class>
+
+			<class name="vibe.people.tests.PeopleTest">
+				<methods>
+					<include name="searchPeople"></include>
+					<include name="followAndUnfollowUser"></include>
+					<include name="filterByDownline"></include>
+					<include name="filterByTeam"></include>
+				</methods>
+			</class>
+
+			<class name="vibe.goals.tests.GoalsTests">
+				<methods>
+					<include name="CreateGoal"></include>
+					<include name="EditGoal"></include>
+					<include name="GoalMarkAsComplete"></include>
+					<include name="ViewGoalFromGoalBoard"></include>
+					<include name="DeleteGoal"></include>
+					<include name="AddTaskFromGoal"></include>
+					<include name="DeleteTaskFromGoals"></include>
+
+				</methods>
+			</class>
+
+
+			<class name="vibe.reports.tests.ReportsTest">
+				<methods>
+					<include name="validateAllTablesWithTitlesOfReports"></include>
+				</methods>
+			</class>
+
+		<class name="vibe.shopping2.tests.VibeMPShoppingTests">
+	        <methods>  
+		        <include name="placeOrderOfMP" />
+		        <include name="placeOrderWithMultiProductsOfMP" /> 
+		        <include name="autoshipOrderOfMP" />   
+	        </methods>
+      </class> 
+
+			<class name="common.UserLogout" />
+
+			<class name="vibe.teardown.tests.AdminTearDownRl3">
+				<methods>
+					<!-- <include name="deleteMultipleResourcesInACategory"></include>
+					<include name="deleteResourceInAdmin"></include> -->
+					<include name="deleteRLCategory"></include>
+				</methods>
+			</class>
+
+			<class name="vibe.teardown.tests.AdminTearDownEcard">
+				<methods>
+					<include name="deleteEcardTemplate"></include>
+					<include name="deleteParentCategory"></include>
+				</methods>
+			</class>
+
+			<class name="vibe.teardown.tests.AdminTeardownFaq" />
+			
+			  <class name="vibe.teardown.tests.AdminTeardownInappropriateWords"/>
+
+
+
+			<class name="vibe.shopping2.tests.VibeRetailShoppingTests">
+				<methods>
+					<include name="newShopCustomerEnrollment"></include>
+					<include name="placeOrderProducts"></include>
+					<include name="placeAutoshipOrder"></include>
+					<include name="emailNdVerifyMyWishList"></include>					
+					<include name="combineOrderNdAutoship"></include>
+				</methods>
+			</class>
+
+
+
+		</classes> 
+	</test>
+
+</suite>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [SmokeSuiteMaster]" parallel="tests">
+  <parameter name="browser" value="firefox"/>
+  <parameter name="appUrl" value="http://monat-stage2.vibeoffice.com/"/>
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    <listener class-name="common.ExtentReportNG"/>
+    <listener class-name="common.TestNGCustomReportListener"/>
+    <listener class-name="common.RetryListener"/>
+  </listeners>
+  <test name="FirefoxTest3">
+    <parameter name="browser" value="firefox"/>
+    <parameter name="appUrl" value="http://monat-stage2.vibeoffice.com/"/>
+    <classes>
+      <class name="common.DriverInitializerGrid"/>
+      <class name="common.LoginCredentials"/>
+      <class name="vibe.admin.tests.AdminEcard">
+        <methods>
+          <include name="createEcardCategory"/>
+        </methods>
+      </class> <!-- vibe.admin.tests.AdminEcard -->
+    </classes>
+  </test> <!-- FirefoxTest3 -->
+  <test name="FirefoxTest3(failed)" parallel="tests">
+    <parameter name="browser" value="firefox"/>
+    <parameter name="appUrl" value="http://monat-stage2.vibeoffice.com/"/>
+    <classes>
+      <class name="vibe.admin.tests.AdminEcard">
+        <methods>
+          <include name="createEcardCategory"/>
+        </methods>
+      </class> <!-- vibe.admin.tests.AdminEcard -->
+      <class name="common.DriverInitializerGrid">
+        <methods>
+          <include name="openBrowser"/>
+        </methods>
+      </class> <!-- common.DriverInitializerGrid -->
+      <class name="common.LoginCredentials">
+        <methods>
+          <include name="login"/>
+        </methods>
+      </class> <!-- common.LoginCredentials -->
+    </classes>
+  </test> <!-- FirefoxTest3(failed) -->
+</suite> <!-- Failed suite [SmokeSuiteMaster] -->

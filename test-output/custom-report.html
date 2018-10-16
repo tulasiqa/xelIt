@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>TestNG Report</title>
+<style type="text/css">
+table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}
+td,th {border:1px solid #009;padding:.25em .5em}
+.result th {vertical-align:bottom}
+.param th {padding-left:1em;padding-right:1em}
+.param td {padding-left:.5em;padding-right:2em}
+.stripe td,.stripe th {background-color: #E6EBF9}
+.numi,.numi_attn {text-align:right}
+.total td {font-weight:bold}
+.passedodd td {color: #0A0}
+.passedeven td {color: #0A0}
+.skippedodd td {color: #CCC}
+.skippedodd td {color: #DDD}
+.failedodd td,.numi_attn {color: #D00}
+.failedeven td,.stripe .numi_attn {color: #D00}
+.stacktrace {white-space:pre;font-family:monospace}
+.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}
+</style>
+</head>
+<body>
+<center><h1>Full Suite Report - 2018/10/11 23:56:15</h1></center><table cellspacing="0" cellpadding="0" class="testOverview">
+<tr><th>Test</th><th>Methods<br/>Passed</th><th># skipped</th><th># failed</th><th>Browser</th><th>Start<br/>Time</th><th>End<br/>Time</th><th>Total<br/>Time(hh:mm:ss)</th><th>Included<br/>Groups</th><th>Excluded<br/>Groups</th></tr>
+<tr><th colspan="10">SmokeSuiteMaster</th></tr>
+<tr><td style="text-align:left;padding-right:2em"><a href="#t1"><b>FirefoxTest3</b></a></td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">2</td><td class="numi">firefox</td></td>
+<td class="numi">11:54:57</td></td>
+<td class="numi">11:56:15</td></td>
+<td class="numi">00:01:18</td><td class="numi"></td><td class="numi"></td></tr>
+</table>
+<table cellspacing="0" cellpadding="0" class="methodOverview" id="summary">
+<tr><th>Class</th><th>Method</th><th>Exception Info</th><th>Start Time </th><th>Execution Time<br/>(hh:mm:ss)</th></tr>
+<tr><th colspan="5">SmokeSuiteMaster</th></tr>
+<tr id="t1"><th colspan="5">FirefoxTest3 &#8212; failed</th></tr>
+<tr class="failedodd"><td>common.LoginCredentials</td><td><a href="#m1"><b>login</b>  </a></td><td class="numi" style="text-align:left;padding-right:2em">java.lang.AssertionError: expected [Signed in successfully.] but found [The user ID or password is incorrect, Please try again.]<br/></td><td style="text-align:right">11:55:38</td><td class="numi">00:00:10</td></tr>
+<tr class="failedeven"><td>vibe.admin.tests.AdminEcard</td><td><a href="#m2"><b>createEcardCategory</b>  </a></td><td class="numi" style="text-align:left;padding-right:2em">java.lang.AssertionError: Manage Categories panel is not found under Listing Ecard Templates expected [true] but found [false]<br/></td><td style="text-align:right">11:56:00</td><td class="numi">00:00:15</td></tr>
+</table>
+<h1>FirefoxTest3</h1>
+<h2 id="m1">common.LoginCredentials:login</h2>
+<div>
+<div class="stacktrace">java.lang.AssertionError: expected [Signed in successfully.] but found [The user ID or password is incorrect, Please try again.]
+	at common.TestBase.confirmationMessage(TestBase.java:988)
+	at common.TestBase.logIn(TestBase.java:78)
+	at common.LoginCredentials.login(LoginCredentials.java:12)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 22 stack frames</div>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m2">vibe.admin.tests.AdminEcard:createEcardCategory</h2>
+<div>
+<div class="stacktrace">java.lang.AssertionError: Manage Categories panel is not found under Listing Ecard Templates expected [true] but found [false]
+	at vibe.ecards.tests.EcardMethods.listOfPanelTitles(EcardMethods.java:186)
+	at vibe.ecards.tests.EcardMethods.addEcardCategory(EcardMethods.java:194)
+	at vibe.admin.tests.AdminEcard.createEcardCategory(AdminEcard.java:24)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 19 stack frames</div>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<center> TestNG Report </center>
+</body></html>
