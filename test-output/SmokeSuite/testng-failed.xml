@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [SmokeSuite]" parallel="tests">
+  <parameter name="browser" value="firefox"/>
+  <parameter name="appUrl" value="https://www.zagg.com/eu/en_eu/"/>
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    <listener class-name="common.ExtentReportNG"/>
+    <listener class-name="common.TestNGCustomReportListener"/>
+    <listener class-name="common.RetryListener"/>
+  </listeners>
+  <test name="FirefoxTest2">
+    <parameter name="browser" value="firefox"/>
+    <parameter name="appUrl" value="https://www.zagg.com/eu/en_eu/"/>
+    <classes>
+      <class name="common.DriverInitializerGrid"/>
+      <class name="zagg.login.tests.LoginTests"/>
+    </classes>
+  </test> <!-- FirefoxTest2 -->
+  <test name="FirefoxTest4">
+    <parameter name="browser" value="firefox"/>
+    <parameter name="appUrl" value="https://www.zagg.com/eu/en_eu/"/>
+    <classes>
+      <class name="common.DriverInitializerGrid"/>
+      <class name="zagg.login.tests.LoginTests"/>
+    </classes>
+  </test> <!-- FirefoxTest4 -->
+</suite> <!-- Failed suite [SmokeSuite] -->

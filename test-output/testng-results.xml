@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="3" total="3" passed="0">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="SmokeSuiteMaster" duration-ms="300158" started-at="2018-11-28T06:03:25Z" finished-at="2018-11-28T06:08:26Z">
+  <suite name="SmokeSuite" duration-ms="8856" started-at="2018-11-28T09:44:04Z" finished-at="2018-11-28T09:44:13Z">
     <groups>
     </groups>
-    <test name="FirefoxTest2" duration-ms="25247" started-at="2018-11-28T06:03:25Z" finished-at="2018-11-28T06:03:51Z">
+    <test name="FirefoxTest2" duration-ms="8323" started-at="2018-11-28T09:44:04Z" finished-at="2018-11-28T09:44:12Z">
+      <class name="zagg.login.tests.LoginTests">
+        <test-method status="PASS" signature="login()[pri:101, instance:zagg.login.tests.LoginTests@75881071]" name="login" duration-ms="1162" started-at="2018-11-28T15:14:11Z" finished-at="2018-11-28T15:14:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+      </class> <!-- zagg.login.tests.LoginTests -->
       <class name="common.DriverInitializerGrid">
-        <test-method status="PASS" signature="openBrowser(java.lang.String, java.lang.String)[pri:0, instance:common.DriverInitializerGrid@2a70a3d8]" name="openBrowser" is-config="true" duration-ms="10888" started-at="2018-11-28T11:33:25Z" finished-at="2018-11-28T11:33:36Z">
+        <test-method status="PASS" signature="openBrowser(java.lang.String, java.lang.String)[pri:0, instance:common.DriverInitializerGrid@1fc2b765]" name="openBrowser" is-config="true" duration-ms="7136" started-at="2018-11-28T15:14:04Z" finished-at="2018-11-28T15:14:11Z">
           <params>
             <param index="0">
               <value>
@@ -16,7 +22,7 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[http://monat-stage2.vibeoffice.com/]]>
+                <![CDATA[https://www.zagg.com/eu/en_eu/]]>
               </value>
             </param>
           </params>
@@ -24,119 +30,16 @@
           </reporter-output>
         </test-method> <!-- openBrowser -->
       </class> <!-- common.DriverInitializerGrid -->
-      <class name="common.LoginCredentials">
-        <test-method status="FAIL" signature="login()[pri:101, instance:common.LoginCredentials@289d1c02]" name="login" duration-ms="14354" started-at="2018-11-28T11:33:36Z" finished-at="2018-11-28T11:33:51Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [Signed in successfully.] but found [The user ID or password is incorrect, Please try again.]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Signed in successfully.] but found [The user ID or password is incorrect, Please try again.]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:513)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
-	at org.testng.Assert.assertEquals(Assert.java:116)
-	at org.testng.Assert.assertEquals(Assert.java:190)
-	at org.testng.Assert.assertEquals(Assert.java:200)
-	at common.TestBase.confirmationMessage(TestBase.java:984)
-	at common.TestBase.logIn(TestBase.java:78)
-	at common.LoginCredentials.login(LoginCredentials.java:12)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:782)
-	at org.testng.TestRunner.run(TestRunner.java:632)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
-	at org.testng.SuiteRunner.access$000(SuiteRunner.java:39)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:400)
-	at org.testng.internal.thread.ThreadUtil$2.call(ThreadUtil.java:64)
-	at java.util.concurrent.FutureTask.run(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login -->
-      </class> <!-- common.LoginCredentials -->
     </test> <!-- FirefoxTest2 -->
-    <test name="FirefoxTest4" duration-ms="300158" started-at="2018-11-28T06:03:25Z" finished-at="2018-11-28T06:08:26Z">
-      <class name="common.UserLogin">
-        <test-method status="FAIL" signature="loginAsUser()[pri:10100, instance:common.UserLogin@6eceb130]" name="loginAsUser" duration-ms="133203" started-at="2018-11-28T11:36:12Z" finished-at="2018-11-28T11:38:26Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[Unable to locate element: //*[@id='users']/table[@class='table table-striped filter']/tbody
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'DESKTOP-4ST0B1N', ip: '192.168.99.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities [{moz:profile=C:\Users\DELL\AppData\Local\Temp\rust_mozprofile.RnRelQhrZliB, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, moz:headless=false, platform=ANY, moz:accessibilityChecks=false, moz:useNonSpecCompliantPointerOrigin=false, acceptInsecureCerts=true, browserVersion=59.0, platformVersion=10.0, moz:processID=1648.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt, moz:webdriverClick=true}]
-Session ID: b4fc0698-7e60-4039-a95e-da5dcac9fdf9
-*** Element info: {Using=xpath, value=//*[@id='users']/table[@class='table table-striped filter']/tbody}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: //*[@id='users']/table[@class='table table-striped filter']/tbody
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'DESKTOP-4ST0B1N', ip: '192.168.99.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities [{moz:profile=C:\Users\DELL\AppData\Local\Temp\rust_mozprofile.RnRelQhrZliB, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, moz:headless=false, platform=ANY, moz:accessibilityChecks=false, moz:useNonSpecCompliantPointerOrigin=false, acceptInsecureCerts=true, browserVersion=59.0, platformVersion=10.0, moz:processID=1648.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt, moz:webdriverClick=true}]
-Session ID: b4fc0698-7e60-4039-a95e-da5dcac9fdf9
-*** Element info: {Using=xpath, value=//*[@id='users']/table[@class='table table-striped filter']/tbody}
-	at sun.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:509)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
-	at common.TestBase.selectUser(TestBase.java:1346)
-	at common.TestBase.advancedSearchToSelectUser(TestBase.java:1339)
-	at common.TestBase.loginAsUserFromAdvanced(TestBase.java:1318)
-	at common.UserLogin.loginAsUser(UserLogin.java:12)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
-	at org.testng.internal.Invoker.retryFailed(Invoker.java:967)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:782)
-	at org.testng.TestRunner.run(TestRunner.java:632)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
-	at org.testng.SuiteRunner.access$000(SuiteRunner.java:39)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:400)
-	at org.testng.internal.thread.ThreadUtil$2.call(ThreadUtil.java:64)
-	at java.util.concurrent.FutureTask.run(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+    <test name="FirefoxTest4" duration-ms="8856" started-at="2018-11-28T09:44:04Z" finished-at="2018-11-28T09:44:13Z">
+      <class name="zagg.login.tests.LoginTests">
+        <test-method status="PASS" signature="login()[pri:101, instance:zagg.login.tests.LoginTests@43a0cee9]" name="login" duration-ms="961" started-at="2018-11-28T15:14:12Z" finished-at="2018-11-28T15:14:13Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginAsUser -->
-      </class> <!-- common.UserLogin -->
+        </test-method> <!-- login -->
+      </class> <!-- zagg.login.tests.LoginTests -->
       <class name="common.DriverInitializerGrid">
-        <test-method status="PASS" signature="openBrowser(java.lang.String, java.lang.String)[pri:0, instance:common.DriverInitializerGrid@3578436e]" name="openBrowser" is-config="true" duration-ms="10259" started-at="2018-11-28T11:33:25Z" finished-at="2018-11-28T11:33:36Z">
+        <test-method status="PASS" signature="openBrowser(java.lang.String, java.lang.String)[pri:0, instance:common.DriverInitializerGrid@704d6e83]" name="openBrowser" is-config="true" duration-ms="7890" started-at="2018-11-28T15:14:04Z" finished-at="2018-11-28T15:14:12Z">
           <params>
             <param index="0">
               <value>
@@ -145,7 +48,7 @@ Session ID: b4fc0698-7e60-4039-a95e-da5dcac9fdf9
             </param>
             <param index="1">
               <value>
-                <![CDATA[http://monat-stage2.vibeoffice.com/]]>
+                <![CDATA[https://www.zagg.com/eu/en_eu/]]>
               </value>
             </param>
           </params>
@@ -153,50 +56,6 @@ Session ID: b4fc0698-7e60-4039-a95e-da5dcac9fdf9
           </reporter-output>
         </test-method> <!-- openBrowser -->
       </class> <!-- common.DriverInitializerGrid -->
-      <class name="common.LoginCredentials">
-        <test-method status="FAIL" signature="login()[pri:101, instance:common.LoginCredentials@706a04ae]" name="login" duration-ms="9618" started-at="2018-11-28T11:33:50Z" finished-at="2018-11-28T11:33:59Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [Signed in successfully.] but found [The user ID or password is incorrect, Please try again.]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Signed in successfully.] but found [The user ID or password is incorrect, Please try again.]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:513)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
-	at org.testng.Assert.assertEquals(Assert.java:116)
-	at org.testng.Assert.assertEquals(Assert.java:190)
-	at org.testng.Assert.assertEquals(Assert.java:200)
-	at common.TestBase.confirmationMessage(TestBase.java:984)
-	at common.TestBase.logIn(TestBase.java:78)
-	at common.LoginCredentials.login(LoginCredentials.java:12)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
-	at org.testng.internal.Invoker.retryFailed(Invoker.java:967)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:782)
-	at org.testng.TestRunner.run(TestRunner.java:632)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
-	at org.testng.SuiteRunner.access$000(SuiteRunner.java:39)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:400)
-	at org.testng.internal.thread.ThreadUtil$2.call(ThreadUtil.java:64)
-	at java.util.concurrent.FutureTask.run(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login -->
-      </class> <!-- common.LoginCredentials -->
     </test> <!-- FirefoxTest4 -->
-  </suite> <!-- SmokeSuiteMaster -->
+  </suite> <!-- SmokeSuite -->
 </testng-results>

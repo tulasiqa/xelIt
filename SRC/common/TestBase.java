@@ -1,18 +1,9 @@
 package common;
-import java.awt.AWTException;
-import java.awt.Robot;
-import java.awt.event.KeyEvent;
-import java.io.File;
-import java.io.IOException;
-import java.math.BigInteger;
-import java.security.SecureRandom;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Random;
-import java.util.TimeZone;
 import java.util.concurrent.TimeUnit;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -44,106 +35,26 @@ import org.testng.asserts.SoftAssert;
 
 import com.relevantcodes.extentreports.ExtentTest;
 
-import vibe.users.tests.UsersMethods;
-
-public class TestBase extends DriverInitializerGrid {
+public class TestBase extends DriverInitializer{
 protected static final Log logger = LogFactory.getLog(TestBase.class);
 
 	WebElement element, toElement;
 	WebDriverWait wait;
 	String By;
 	ExtentTest test;
-	JavascriptExecutor js;	
+	JavascriptExecutor js;		
 	
-	EnvProperties prop = new EnvProperties();
 	protected int num = TestBase.generateRandomNumberInRange(1000, 9999);
 	
-	// This method is used to Login to the application.
-	
-	public void logIn(String userName, String passwd) throws Exception {
-        try{
-            logInfo("inside logIn method.");
-            driver().navigate().to(appUrl + "/login");                
-            waitOnElement("xpath", inputName);
-            inputText("xpath", inputName, userName);
-            inputText("xpath", inputPwd, passwd);
-            if ((driver().getCurrentUrl().contains("tupperware"))){
-                submitElement("xpath", inputPwd);      
-                Thread.sleep(5000);
-                
-            }else{
-                clickOnButton("xpath", btnLogin);     
-                Thread.sleep(5000);
-               }
-            confirmationMessage("Signed in successfully.");
-           // implicityWaits(30);                 
-        }
-        catch(Exception e){
-            logInfo(e.getMessage());
-           // logInfo("Failed!! unable to login to the application.");        
-        }
-       
-	}	
-	
-	
-	// This method is used to Logout from the appl
-	 public void logOut() throws Exception{
-			logInfo("inside logOut method.");
-			if(driver().getCurrentUrl().contains("avon")){
-				logInfo("inside logOut method.");
-				back2Office();
-				verifyElementPresent("cssSelector", lnkProfileDrpdn);
-				clickOnElement("cssSelector", lnkProfileDrpdn);
-				List <WebElement> log = driver().findElements(org.openqa.selenium.By.cssSelector(logOutAvon));
-				for (WebElement logs : log){
-					if (logs.getText().equalsIgnoreCase("Logout")){
-						logs.click();
-						break;
-						}	
-				}					
-				Thread.sleep(5000);
-				System.out.println("Logged Out");		
-			}
-			else{			
-				back2Office();
-				waitOnElement("cssSelector", adminlnkProfileDrpdn);
-				clickOnElement("cssSelector", adminlnkProfileDrpdn);
-				List <WebElement> log = driver().findElements(org.openqa.selenium.By.cssSelector(logOutAdmin));
-				for (WebElement logs : log){
-					if (logs.getText().equalsIgnoreCase("Logout")){
-						logs.click();
-						break;
-						}	
-				}					
-				Thread.sleep(5000);
-				System.out.println("Logged Out");	
-				waitOnElement("cssSelector",logOut);
-				clickOnElement("cssSelector",logOut);
-				
-				
-			}
-						
+	// This method is used to get the system date and time	
+		public static String getSystemDate(){
+			DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
+			Date date  = new Date();
+			return dateFormat.format(date);
 		}
-	 
-	 public void go2HomePage(){
-			logInfo("inside go2HomePage() method");
-			driver().navigate().to(appUrl);
-		}
-	 
 	
-	//This method is used to open a specified URL.
-	
-	public void openUrl(WebDriver driver, String url){
-		try{
-			driver().get(url);
-		}
-		catch(Exception e){
-			logInfo("Failed!! unable to open the specified url.");		
-		}
-	}
-	
-	// This method is used to Maximize the browser window.
-	
+		
+	// This method is used to Maximize the browser window.	
 	public void maximizeBrowser() throws Exception{
 		try{	
 			driver().manage().window().maximize();
@@ -751,142 +662,31 @@ protected static final Log logger = LogFactory.getLog(TestBase.class);
 				logInfo("Failed!! Unable to select the specified option" + locator);		
 			}
 		}
-	
-	
-	
-	// This method is used to get the element text.
-	
-	public void getText(String Bytype, String locator, String String) throws Exception{	
-		try{
-			switch(Bytype){
-			case "xpath":
-				element = driver().findElement(ByXPath.xpath(locator));
-				break;
-			case "id":
-				element = driver().findElement(ById.id(locator));
-				break;
-			case "name":
-				element = driver().findElement(ByName.name(locator));
-				break;
-			case "className":
-				element = driver().findElement(ByClassName.className(locator));
-				break;
-			case "cssSelector":
-				element = driver().findElement(ByCssSelector.cssSelector(locator));
-				break;
-			default :
-				System.out.println("Invalid type passed to getText."+locator);
-				break;
-			}
-			
-			if(element.isDisplayed() && element.isEnabled()){
-				System.out.println(String +" : " +element.getText());
-			}
-		}
-		catch(Exception e){
-			logInfo("Failed!! Unable to get the text of an element " + locator);		
-		}
 		
-	}
-	
-	// This method is used to wait until we found an element.
-	
-	public void implicityWaits(int i ) throws Exception{
-		try{
-			driver().manage().timeouts().implicitlyWait(i,TimeUnit.SECONDS);
-			
-			WebDriverWait wait = new WebDriverWait(driver(), 10);
-
-			//WebElement element = wait.until(ExpectedConditions.elementToBeClickable();
-		}
-		catch(Exception e) {
-			logInfo("Failed!! Page is not sync with webdriver within :" + i +" Seconds");			
-		}
-	}
-	
-
-	// This method is used to navigate to the home page.
-	
-	public void back2Office(){		
-		logInfo("inside back2Office() method.");		
-		driver().navigate().to(appUrl);
-	
-	}
-	
-
-	
-	// This method is used to get the current date.
-	
-	public static String getDate(int period,String format){
-	     Calendar currentDate = Calendar.getInstance();
-	     SimpleDateFormat formatter= new SimpleDateFormat(format);
-	     currentDate.add(Calendar.DAY_OF_MONTH, period);
-	     String date = formatter.format(currentDate.getTime());
-	     return date;
-	}
-	
-	// This method is used to get the current day.
-	
-		public static int getCurrentDay(){
-		     Calendar calendar = Calendar.getInstance(TimeZone.getDefault());		     
-		     int day = calendar.get(calendar.DATE);
-		     return day;
-		     
-		}
-	  
-	//This method is used to get the previous/next month date.
-	public static String getDateByMonth(int period,String format){
-	     Calendar currentDate = Calendar.getInstance();
-	     SimpleDateFormat formatter= new SimpleDateFormat(format);
-	     currentDate.add(Calendar.MONTH, period);
-	     String date = formatter.format(currentDate.getTime());
-	     return date;
-	}
-	
-	//This method is used to get the previous/next year date.
-	public static String getDateByYear(int period,String format){
-	     Calendar currentDate = Calendar.getInstance();
-	     SimpleDateFormat formatter= new SimpleDateFormat(format);
-	     currentDate.add(Calendar.YEAR, period);
-	     String date = formatter.format(currentDate.getTime());
-	     return date;
-	}
-	
-	// This method is used to generate a random number.
-	
+	// This method is used to generate a random number.	
 	public static int random(){
         Random r = new Random();
         int random_num = r.nextInt(1000);
         return random_num;
-	}
+	}	
 	
-	//This method is used to generate a random string.
-	
-    private static SecureRandom random = new SecureRandom();
-    public static String generateRandomString() {
-    	return new BigInteger(8, random).toString(64);
-    }
-  
-    // This method is used to generate random number in s specified range.
-    
+    // This method is used to generate random number in s specified range.    
     public static int generateRandomNumberInRange(int min,int max){
 		logger.info("Generating random number in range - "+min+","+max);
 		Random r = new Random();
 		int num=r.nextInt(max-min) + min;
 		logger.info("Generating random number = "+num);
-		return num;
-	}
+		return num;	
+		}
 
 		
 
-// This method is used to Wait for a element to present.
-	
-			public void waitOnElement(String Bytype,String locator) throws Exception, Exception{
+    	// This method is used to Wait for a element to present.	
+			public void waitOnElement(String Bytype,String locator) throws Exception{
 				try{
 					Wait<WebDriver> wait = new FluentWait<WebDriver>(driver())
 						 .withTimeout(120, TimeUnit.SECONDS)
-			    		 .pollingEvery(2, TimeUnit.SECONDS);
-			   			   		 
+			    		 .pollingEvery(2, TimeUnit.SECONDS);			   			   		 
 					switch(Bytype){
 					case "xpath":
 						element = wait.until(ExpectedConditions.visibilityOfElementLocated(ByXPath.xpath(locator)));
@@ -909,60 +709,16 @@ protected static final Log logger = LogFactory.getLog(TestBase.class);
 					default :
 						System.out.println("Invalid type passed to waitOnElement.");
 						break;
-					}
-					
+					}					
 					if(element.isDisplayed()){
-		            	logInfo(element.getText() + " element is present");
-		            	logInfo(element.getAttribute("value") + " element is present");
+		            	logInfo(element.getText() + " element is present");		            	
 		            }
 				}
 				catch(Exception e){
 					logInfo("Failed!! Unable to wait on this element " + locator);		
-				}
-				
+				}				
 			}	
-			
-			
-			public void webDriverWiats() {
-				 WebDriverWait wait = new WebDriverWait(driver(), 10);		
-				 WebElement from = driver().findElement(ById(""));
-				 WebElement to = driver().findElement(ById(""));
-
-				 WebElement element = wait.until(ExpectedConditions.elementToBeClickable(ByPartialLinkText.partialLinkText("")));
-
-				 //WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.id("sd")));
-				 Actions builder = new Actions(driver());
-				 builder.clickAndHold(from).release(to).build().perform();
-				 
-				 
-				 Action dragAndDrop = (Action) builder.clickAndHold(from);
 				
-			}
-			
-
-    
-    
-	private org.openqa.selenium.By ById(String string) {
-				// TODO Auto-generated method stub
-				return null;
-			}
-
-
-	// This method is used to get the system date
-	
-	public static String getSystemDate(){
-		DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
-		Date date = new Date();
-		return dateFormat.format(date);
-	}
-	// This method is used to get the system date and time
-	
-	public static String getSystemDateTime(){
-		DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
-		Date date  = new Date();
-		return dateFormat.format(date);
-	}
-	
 	// This method is used to wait until page being loaded.
 	
 	public void waitForPageToLoad()
@@ -975,46 +731,10 @@ protected static final Log logger = LogFactory.getLog(TestBase.class);
 	 }
 	
 	
-	//This method is used to check the toaster confirmation messages after create/delete/update actions
-	
-	public void confirmationMessage(String expectedConfMessage) throws Exception{
-		WebDriverWait wait = new WebDriverWait(driver(), 10);		
-		try{			
-			WebElement actualConfMsg = driver().findElement(ByXPath.xpath(confirmationMessage));		
-			Assert.assertEquals(actualConfMsg.getText(), expectedConfMessage);
-			clickOnElement("xpath", comfirmationToasterClose);
-		}
-		catch(Exception e){
-			logInfo("Failed!! Unable to capture confirmation message");
-		}			
-	}		
-	
-		
-	public void tabbing()throws IOException, AWTException {
-		Robot rb= new Robot();
-		rb.delay(2000);
-		//	rb.keyPress(KeyEvent.VK_TAB);
-		rb.keyPress(KeyEvent.VK_TAB);
-		rb.keyRelease(KeyEvent.VK_TAB);
-		//	rb.delay(5000);
-	}
-	
-	
-	public void leavePage() throws AWTException {
-		Robot rb= new Robot();
-		rb.delay(2000);
-		//rb.keyPress(KeyEvent.VK_TAB);
-		//rb.keyRelease(KeyEvent.VK_TAB);
-		rb.keyPress(KeyEvent.VK_ENTER);
-		rb.keyRelease(KeyEvent.VK_ENTER);
-	}
-
-		// Validate text in the webpage.
-		
+			// Validate text in the webpage.		
 		public boolean validateTextPresentInPage(String Bytype, String locator, String expText){
 			String value = null;
-			boolean isTextFound = false;
-			
+			boolean isTextFound = false;			
 			try{
 				switch(Bytype){
 				case "xpath":
@@ -1038,8 +758,7 @@ protected static final Log logger = LogFactory.getLog(TestBase.class);
 				default :
 					System.out.println("Invalid type passed to selectFromDropdown."+locator);
 					break;
-				}
-				
+				}				
 				if(element.isDisplayed() && element.isEnabled()){
 					value = element.getText().trim(); 
 					if(value.contains(expText)){
@@ -1049,7 +768,7 @@ protected static final Log logger = LogFactory.getLog(TestBase.class);
 				
 			} catch(Exception e){
 				logInfo(value + " could not be in the page.");
-				logger.error("Failed!! Required option is not available or not select drop down list"+locator);		
+				logger.error("Failed!! Required option is not available "+locator);		
 			}
 			return isTextFound;
 			
@@ -1265,172 +984,7 @@ protected static final Log logger = LogFactory.getLog(TestBase.class);
 			
 		}
 		
-		// This method is being used to accept bootbox alert/confirmation boxes
-		
-		public void confirmOK()throws IOException, AWTException {
-			logInfo("Inside confirmOK() method.");
-			try{				
-				waitOnElement("cssSelector", deleteToOk);
-				waitOnElement("cssSelector", deleteToOk);			
-				clickOnButton("cssSelector", deleteToOk);
-				Thread.sleep(4000);
-			} 
-			catch (Exception e) {
-				logInfo("Failed!! unable to click on confirmOK");		
-			}
-		}
-			
-		// This method is being used to cancel bootbox alert/confirmation boxes
-		public void confirmCancel()throws IOException, AWTException {
-			logInfo("Inside confirmCancel() method.");
-			try{
-				waitOnElement("cssSelector", deleteToCancel);
-				clickOnButton("cssSelector", deleteToCancel);
-			} 
-			catch (Exception e) {
-				logInfo("Failed!! unable to click on confirmCancel");		
-			}
-		}	
-		
-		public boolean verifyFileExistsOnDisk(String filepath) throws InterruptedException{
-			 logInfo("inside verifyFileExistsOnDisk() method");
-			 File file = new File(filepath);
-			 return file.exists();
-		}	
-
- 
-		public void userLogin(String userName, String password) throws Exception{
-			logInfo("inside userLogin() Method...");    
-	        logOut();
-	        logIn(userName,password);
-		 }
-		    
-	    public void adminLogin() throws Exception{
-	        logInfo("inside adminLogin() Method...");    
-	        logOut();
-	    	logIn(prop.getLocatorForEnvironment(appUrl,"adminUser_text"),prop.getLocatorForEnvironment(appUrl,"adminPwd_text"));
-	    }
-	    
-	    public void loginAsUserFromAdvanced(String firstName, String lastName, String consultantid) throws Exception{           
-	        logInfo("inside loginAsUserFromAdvanced() method");  	 
-	        UsersMethods um = new UsersMethods(); 
-	         um.go2Users(); 
-	         advancedSearchToSelectUser(firstName,lastName,consultantid);
-	         
-	      
-	    }
-	    
-	    
-	   
-	    
-		public void advancedSearchToSelectUser(String firstName, String lastName, String consultantid) throws Exception {
-		logInfo("inside advancedSearchToSelectUser() method");
-			waitOnElement("cssSelector", btnAdvancedSearch);
-			clickOnElement("cssSelector", btnAdvancedSearch);			
-			waitOnElement("cssSelector", inputAdvFirstName);
-			inputTextClear("cssSelector", inputAdvFirstName);
-			inputText("cssSelector", inputAdvFirstName, firstName);
-			inputTextClear("cssSelector", inputAdvLastName);
-			inputText("cssSelector", inputAdvLastName, lastName);
-			inputTextClear("cssSelector", inputAdvConsultantID);
-			inputText("cssSelector", inputAdvConsultantID, consultantid);
-			clickOnElement("xpath", btnAdvSubmit);	
-			Thread.sleep(10000);
-			selectUser("ID", consultantid);		
-		}
-		
-		
-		public void selectUser(String title, String consId) throws Exception{
-			   logInfo("inside selectUser() method");			   
-			   waitOnElement("xpath","//*[@id='users']/table[@class='table table-striped filter']/tbody");
-			   WebElement tbl = driver().findElement(org.openqa.selenium.By.xpath("//*[@id='users']/table[@class='table table-striped filter']/tbody"));
-			   List allRows = tbl.findElements(org.openqa.selenium.By.tagName("tr"));
-			   boolean isUserFound = false;
-			   String before_row = "//*[@id='users']/table[@class='table table-striped filter']/tbody/tr[";
-			   String after_row = "]";
-			   WebElement login = null;			  					   
-			   if(allRows.size() >0) {
-				   for(int i=1;i<=allRows.size();i++) {
-					   WebElement Row = driver().findElement(org.openqa.selenium.By.xpath(before_row+i+after_row));
-					   List allCols = Row.findElements(org.openqa.selenium.By.tagName("td"));
-					   for(int j=1; j<=allCols.size();j++) {
-						   if(j==1) {
-						   login = Row.findElement(org.openqa.selenium.By.xpath(before_row+i+"]/td["+j+"]/a"));
-						   }
-						   if(j==2) {
-							   WebElement id = Row.findElement(org.openqa.selenium.By.xpath(before_row+i+"]/td["+j+"]"));
-							   String expId = id.getText().trim();							   
-							   if(expId.equalsIgnoreCase(consId)) {
-								   isUserFound=true;
-								   login.click();								   
-								   break;
-							   }
-						   }
-						  
-					   }
-					 
-					   
-				   }
-			   }
-			   
-			   if(isUserFound==false) {
-				   logInfo(consId + " Consultant ID match not found in search");
-				   Assert.assertTrue(isUserFound, consId + " Consultant ID match not found in search");
-			   }
-		}
-		
-		
-	  	public void userLogout() throws Exception{
-	  			logInfo("inside userLogout() method");	  				
-				back2Office();
-				waitOnElement("cssSelector", logoutHere);	
-				clickOnLink("cssSelector", logoutHere);
-				Thread.sleep(5000);
-	  	}
-	    
-	  	public void confirmToOk()throws IOException, AWTException {
-            logInfo("Entered into confirmToOk() method ");        
-            try{            	
-                waitOnElement("cssSelector", btnDeleteResourceOk);
-                clickOnButton("cssSelector", btnDeleteResourceOk);
-                        
-            }
-            catch (Exception e) {
-                logInfo("Failed!! unable to click on ok button on popup window");        
-            }
-        }
-	  	
-	  	public void confirmToNo()throws IOException, AWTException {
-            logInfo("Entered into confirmToNo() method ");        
-            try{            	
-            	waitOnElement("cssSelector", btnDeleteResourceOk);
-                waitOnElement("cssSelector", btnDeleteEcardsOk);
-                clickOnButton("cssSelector", btnDeleteEcardsOk);
-                        
-            }
-            catch (Exception e) {
-                logInfo("Failed!! unable to click on ok button on popup window");        
-            }
-        }
-	    
-	  	//To delete downloaded file from local
-		   public void deleteFileFromLocal(String filename){
-		        logInfo("Entered into deleteFileFromLocal() Method ");
-			      try { 
-			         File file = new File(filepath+filename);
-			         if(file.delete()) { 
-			            System.out.println(file.getName() + " is deleted successfully");
-			            logInfo(file.getName() + " is deleted successfully");
-			         } else {
-			            System.out.println("couldn't delete the file, Delete operation is failed.");
-			            logInfo("couldn't delete the file,Delete operation is failed.");
-			    		}
-			      } catch(Exception e) {
-			         e.printStackTrace();
-			      }
-			   }
-		
-	
+			    
 	  
 	  	 public void hoverOnElement(String Bytype, String locator) throws Exception{
 			 try{
@@ -1584,19 +1138,7 @@ protected static final Log logger = LogFactory.getLog(TestBase.class);
 			}
 	 }
 
-	 
-	 public void clickHere2Go2AdminAccount() throws Exception, Exception{
-		 logInfo("inside clickHere2Go2AdminAccount() method");
-		 
-		 waitOnElement("cssSelector","div.caution_msg > a");
-		 clickOnElement("cssSelector","div.caution_msg > a");
-	 }
-	 
-	 public void waitOnSpinner() throws Exception {
-		 logInfo("inside waitOnSpinner() method");
-			waitOnElement("xpath", "//*[@id='spinner-container'][@display='none']");
-	 }
-	 
+	 	 
 	 public void dragAndDropAction(WebElement from, WebElement to) throws Exception{		
 			logInfo("Entered into dragAndDropAction() method");		
 			Actions builder = new Actions(driver());
