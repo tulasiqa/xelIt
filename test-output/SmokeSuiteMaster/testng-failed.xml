@@ -10,30 +10,30 @@
     <listener class-name="common.TestNGCustomReportListener"/>
     <listener class-name="common.RetryListener"/>
   </listeners>
-  <test name="FirefoxTest3">
+  <test name="FirefoxTest2">
     <parameter name="browser" value="firefox"/>
     <parameter name="appUrl" value="http://monat-stage2.vibeoffice.com/"/>
     <classes>
       <class name="common.DriverInitializerGrid"/>
       <class name="common.LoginCredentials"/>
-      <class name="vibe.admin.tests.AdminEcard">
-        <methods>
-          <include name="createEcardCategory"/>
-        </methods>
-      </class> <!-- vibe.admin.tests.AdminEcard -->
     </classes>
-  </test> <!-- FirefoxTest3 -->
-  <test name="FirefoxTest3(failed)" parallel="tests">
+  </test> <!-- FirefoxTest2 -->
+  <test name="FirefoxTest4">
     <parameter name="browser" value="firefox"/>
     <parameter name="appUrl" value="http://monat-stage2.vibeoffice.com/"/>
     <classes>
-      <class name="vibe.admin.tests.AdminEcard">
-        <methods>
-          <include name="createEcardCategory"/>
-        </methods>
-      </class> <!-- vibe.admin.tests.AdminEcard -->
+      <class name="common.DriverInitializerGrid"/>
+      <class name="common.LoginCredentials"/>
+      <class name="common.UserLogin"/>
+    </classes>
+  </test> <!-- FirefoxTest4 -->
+  <test name="FirefoxTest2(failed)" parallel="tests">
+    <parameter name="browser" value="firefox"/>
+    <parameter name="appUrl" value="http://monat-stage2.vibeoffice.com/"/>
+    <classes>
       <class name="common.DriverInitializerGrid">
         <methods>
+          <include name="openBrowser"/>
           <include name="openBrowser"/>
         </methods>
       </class> <!-- common.DriverInitializerGrid -->
@@ -43,5 +43,27 @@
         </methods>
       </class> <!-- common.LoginCredentials -->
     </classes>
-  </test> <!-- FirefoxTest3(failed) -->
+  </test> <!-- FirefoxTest2(failed) -->
+  <test name="FirefoxTest4(failed)" parallel="tests">
+    <parameter name="browser" value="firefox"/>
+    <parameter name="appUrl" value="http://monat-stage2.vibeoffice.com/"/>
+    <classes>
+      <class name="common.DriverInitializerGrid">
+        <methods>
+          <include name="openBrowser"/>
+          <include name="openBrowser"/>
+        </methods>
+      </class> <!-- common.DriverInitializerGrid -->
+      <class name="common.UserLogin">
+        <methods>
+          <include name="loginAsUser"/>
+        </methods>
+      </class> <!-- common.UserLogin -->
+      <class name="common.LoginCredentials">
+        <methods>
+          <include name="login"/>
+        </methods>
+      </class> <!-- common.LoginCredentials -->
+    </classes>
+  </test> <!-- FirefoxTest4(failed) -->
 </suite> <!-- Failed suite [SmokeSuiteMaster] -->

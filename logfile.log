@@ -103,3 +103,183 @@
 2018-08-22 15:46:19,005 INFO  [Logger]  element is present 
 2018-08-22 15:46:20,459 INFO  [Logger]  element is present 
 2018-08-22 15:46:20,522 INFO  [Logger]  element is present 
+2018-11-28 11:27:44,543 INFO  [Logger] inside login() method 
+2018-11-28 11:27:44,544 INFO  [Logger] inside login() method 
+2018-11-28 11:27:44,676 INFO  [Logger] inside logIn method. 
+2018-11-28 11:27:44,680 INFO  [Logger] inside logIn method. 
+2018-11-28 11:27:44,695 INFO  [Logger]  
+2018-11-28 11:27:44,693 INFO  [Logger]  
+2018-11-28 11:27:44,710 INFO  [Logger] inside loginAsUser() Test. 
+2018-11-28 11:27:44,726 INFO  [Logger] inside loginAsUserFromAdvanced() method 
+2018-11-28 11:27:44,731 INFO  [TestBase] Generating random number in range - 1000,9999 
+2018-11-28 11:27:44,731 INFO  [TestBase] Generating random number = 1134 
+2018-11-28 11:27:44,739 INFO  [TestBase] Generating random number in range - 1000,9999 
+2018-11-28 11:27:44,739 INFO  [TestBase] Generating random number = 3784 
+2018-11-28 11:27:44,742 INFO  [TestBase] Generating random number in range - 1000,9999 
+2018-11-28 11:27:44,742 INFO  [TestBase] Generating random number = 6973 
+2018-11-28 11:27:44,744 INFO  [TestBase] Generating random number in range - 1000,9999 
+2018-11-28 11:27:44,744 INFO  [TestBase] Generating random number = 1852 
+2018-11-28 11:27:44,751 INFO  [TestBase] Generating random number in range - 1000,9999 
+2018-11-28 11:27:44,751 INFO  [TestBase] Generating random number = 9241 
+2018-11-28 11:27:44,751 INFO  [TestBase] Generating random number in range - 1000,9999 
+2018-11-28 11:27:44,751 INFO  [TestBase] Generating random number = 3070 
+2018-11-28 11:27:44,757 INFO  [Logger] inside go2Users() method. 
+2018-11-28 11:27:44,766 INFO  [Logger] inside loginAsUser() Test. 
+2018-11-28 11:27:44,772 INFO  [Logger] inside loginAsUserFromAdvanced() method 
+2018-11-28 11:27:44,772 INFO  [TestBase] Generating random number in range - 1000,9999 
+2018-11-28 11:27:44,772 INFO  [TestBase] Generating random number = 5046 
+2018-11-28 11:27:44,772 INFO  [TestBase] Generating random number in range - 1000,9999 
+2018-11-28 11:27:44,772 INFO  [TestBase] Generating random number = 5044 
+2018-11-28 11:27:44,772 INFO  [TestBase] Generating random number in range - 1000,9999 
+2018-11-28 11:27:44,772 INFO  [TestBase] Generating random number = 5102 
+2018-11-28 11:27:44,772 INFO  [TestBase] Generating random number in range - 1000,9999 
+2018-11-28 11:27:44,772 INFO  [TestBase] Generating random number = 5072 
+2018-11-28 11:27:44,772 INFO  [TestBase] Generating random number in range - 1000,9999 
+2018-11-28 11:27:44,773 INFO  [TestBase] Generating random number = 9632 
+2018-11-28 11:27:44,773 INFO  [TestBase] Generating random number in range - 1000,9999 
+2018-11-28 11:27:44,773 INFO  [TestBase] Generating random number = 6952 
+2018-11-28 11:27:44,777 INFO  [Logger] inside go2Users() method. 
+2018-11-28 11:30:44,134 INFO  [Logger] inside login() method 
+2018-11-28 11:30:44,135 INFO  [Logger] inside login() method 
+2018-11-28 11:30:44,139 INFO  [Logger] inside logIn method. 
+2018-11-28 11:30:44,139 INFO  [Logger] inside logIn method. 
+2018-11-28 11:30:44,143 INFO  [Logger]  
+2018-11-28 11:30:44,143 INFO  [Logger]  
+2018-11-28 11:30:44,151 INFO  [Logger] inside loginAsUser() Test. 
+2018-11-28 11:30:44,156 INFO  [Logger] inside loginAsUserFromAdvanced() method 
+2018-11-28 11:30:44,159 INFO  [TestBase] Generating random number in range - 1000,9999 
+2018-11-28 11:30:44,159 INFO  [TestBase] Generating random number = 4814 
+2018-11-28 11:30:44,161 INFO  [TestBase] Generating random number in range - 1000,9999 
+2018-11-28 11:30:44,161 INFO  [TestBase] Generating random number = 3748 
+2018-11-28 11:30:44,162 INFO  [TestBase] Generating random number in range - 1000,9999 
+2018-11-28 11:30:44,162 INFO  [TestBase] Generating random number = 4042 
+2018-11-28 11:30:44,163 INFO  [TestBase] Generating random number in range - 1000,9999 
+2018-11-28 11:30:44,163 INFO  [TestBase] Generating random number = 6710 
+2018-11-28 11:30:44,166 INFO  [TestBase] Generating random number in range - 1000,9999 
+2018-11-28 11:30:44,166 INFO  [TestBase] Generating random number = 6410 
+2018-11-28 11:30:44,166 INFO  [TestBase] Generating random number in range - 1000,9999 
+2018-11-28 11:30:44,166 INFO  [TestBase] Generating random number = 9448 
+2018-11-28 11:30:44,170 INFO  [Logger] inside go2Users() method. 
+2018-11-28 11:30:44,176 INFO  [Logger] inside loginAsUser() Test. 
+2018-11-28 11:30:44,181 INFO  [Logger] inside loginAsUserFromAdvanced() method 
+2018-11-28 11:30:44,181 INFO  [TestBase] Generating random number in range - 1000,9999 
+2018-11-28 11:30:44,181 INFO  [TestBase] Generating random number = 9946 
+2018-11-28 11:30:44,181 INFO  [TestBase] Generating random number in range - 1000,9999 
+2018-11-28 11:30:44,181 INFO  [TestBase] Generating random number = 1513 
+2018-11-28 11:30:44,181 INFO  [TestBase] Generating random number in range - 1000,9999 
+2018-11-28 11:30:44,181 INFO  [TestBase] Generating random number = 6406 
+2018-11-28 11:30:44,181 INFO  [TestBase] Generating random number in range - 1000,9999 
+2018-11-28 11:30:44,181 INFO  [TestBase] Generating random number = 3214 
+2018-11-28 11:30:44,181 INFO  [TestBase] Generating random number in range - 1000,9999 
+2018-11-28 11:30:44,181 INFO  [TestBase] Generating random number = 3961 
+2018-11-28 11:30:44,181 INFO  [TestBase] Generating random number in range - 1000,9999 
+2018-11-28 11:30:44,181 INFO  [TestBase] Generating random number = 9460 
+2018-11-28 11:30:44,184 INFO  [Logger] inside go2Users() method. 
+2018-11-28 11:31:57,025 INFO  [Logger] inside login() method 
+2018-11-28 11:31:57,033 INFO  [Logger] inside logIn method. 
+2018-11-28 11:31:57,237 INFO  [Logger] inside login() method 
+2018-11-28 11:31:57,248 INFO  [Logger] inside logIn method. 
+2018-11-28 11:32:04,486 INFO  [Logger]  element is present 
+2018-11-28 11:32:04,517 INFO  [Logger]  element is present 
+2018-11-28 11:32:04,568 INFO  [Logger] Failed!! Unable to enter a text into a textbox.//*[@id='user_login'] 
+2018-11-28 11:32:04,606 INFO  [Logger] Failed!! Unable to enter a text into a textbox.//*[@id='user_password'] 
+2018-11-28 11:32:05,340 INFO  [Logger]  element is present 
+2018-11-28 11:32:05,371 INFO  [Logger]  element is present 
+2018-11-28 11:32:05,401 INFO  [Logger] Failed!! Unable to enter a text into a textbox.//*[@id='user_login'] 
+2018-11-28 11:32:05,431 INFO  [Logger] Failed!! Unable to enter a text into a textbox.//*[@id='user_password'] 
+2018-11-28 11:32:11,201 INFO  [Logger] inside login() method 
+2018-11-28 11:32:11,204 INFO  [Logger] inside logIn method. 
+2018-11-28 11:32:12,472 INFO  [Logger] inside loginAsUser() Test. 
+2018-11-28 11:32:12,480 INFO  [Logger] inside loginAsUserFromAdvanced() method 
+2018-11-28 11:32:12,482 INFO  [TestBase] Generating random number in range - 1000,9999 
+2018-11-28 11:32:12,482 INFO  [TestBase] Generating random number = 9161 
+2018-11-28 11:32:12,485 INFO  [TestBase] Generating random number in range - 1000,9999 
+2018-11-28 11:32:12,485 INFO  [TestBase] Generating random number = 9788 
+2018-11-28 11:32:12,486 INFO  [TestBase] Generating random number in range - 1000,9999 
+2018-11-28 11:32:12,486 INFO  [TestBase] Generating random number = 6306 
+2018-11-28 11:32:12,487 INFO  [TestBase] Generating random number in range - 1000,9999 
+2018-11-28 11:32:12,487 INFO  [TestBase] Generating random number = 2753 
+2018-11-28 11:32:12,491 INFO  [TestBase] Generating random number in range - 1000,9999 
+2018-11-28 11:32:12,491 INFO  [TestBase] Generating random number = 9058 
+2018-11-28 11:32:12,492 INFO  [TestBase] Generating random number in range - 1000,9999 
+2018-11-28 11:32:12,492 INFO  [TestBase] Generating random number = 3520 
+2018-11-28 11:32:12,496 INFO  [Logger] inside go2Users() method. 
+2018-11-28 11:32:13,334 INFO  [Logger]  element is present 
+2018-11-28 11:32:13,373 INFO  [Logger]  element is present 
+2018-11-28 11:32:13,430 INFO  [Logger] Failed!! Unable to enter a text into a textbox.//*[@id='user_login'] 
+2018-11-28 11:32:13,479 INFO  [Logger] Failed!! Unable to enter a text into a textbox.//*[@id='user_password'] 
+2018-11-28 11:32:14,856 INFO  [Logger] inside advancedSearchToSelectUser() method 
+2018-11-28 11:33:36,459 INFO  [Logger] inside login() method 
+2018-11-28 11:33:36,465 INFO  [Logger] inside logIn method. 
+2018-11-28 11:33:36,815 INFO  [Logger] inside login() method 
+2018-11-28 11:33:36,824 INFO  [Logger] inside logIn method. 
+2018-11-28 11:33:42,714 INFO  [Logger]  element is present 
+2018-11-28 11:33:42,774 INFO  [Logger]  element is present 
+2018-11-28 11:33:42,842 INFO  [Logger] Failed!! Unable to enter a text into a textbox.//*[@id='user_login'] 
+2018-11-28 11:33:42,877 INFO  [Logger] Failed!! Unable to enter a text into a textbox.//*[@id='user_password'] 
+2018-11-28 11:33:43,631 INFO  [Logger]  element is present 
+2018-11-28 11:33:43,677 INFO  [Logger]  element is present 
+2018-11-28 11:33:43,725 INFO  [Logger] Failed!! Unable to enter a text into a textbox.//*[@id='user_login'] 
+2018-11-28 11:33:43,770 INFO  [Logger] Failed!! Unable to enter a text into a textbox.//*[@id='user_password'] 
+2018-11-28 11:33:50,263 INFO  [Logger] inside login() method 
+2018-11-28 11:33:50,268 INFO  [Logger] inside logIn method. 
+2018-11-28 11:33:52,422 INFO  [Logger]  element is present 
+2018-11-28 11:33:52,458 INFO  [Logger]  element is present 
+2018-11-28 11:33:52,494 INFO  [Logger] Failed!! Unable to enter a text into a textbox.//*[@id='user_login'] 
+2018-11-28 11:33:52,545 INFO  [Logger] Failed!! Unable to enter a text into a textbox.//*[@id='user_password'] 
+2018-11-28 11:33:59,884 INFO  [Logger] inside loginAsUser() Test. 
+2018-11-28 11:33:59,889 INFO  [Logger] inside loginAsUserFromAdvanced() method 
+2018-11-28 11:33:59,892 INFO  [TestBase] Generating random number in range - 1000,9999 
+2018-11-28 11:33:59,892 INFO  [TestBase] Generating random number = 1666 
+2018-11-28 11:33:59,894 INFO  [TestBase] Generating random number in range - 1000,9999 
+2018-11-28 11:33:59,894 INFO  [TestBase] Generating random number = 7250 
+2018-11-28 11:33:59,895 INFO  [TestBase] Generating random number in range - 1000,9999 
+2018-11-28 11:33:59,895 INFO  [TestBase] Generating random number = 6725 
+2018-11-28 11:33:59,896 INFO  [TestBase] Generating random number in range - 1000,9999 
+2018-11-28 11:33:59,897 INFO  [TestBase] Generating random number = 1897 
+2018-11-28 11:33:59,901 INFO  [TestBase] Generating random number in range - 1000,9999 
+2018-11-28 11:33:59,901 INFO  [TestBase] Generating random number = 5603 
+2018-11-28 11:33:59,901 INFO  [TestBase] Generating random number in range - 1000,9999 
+2018-11-28 11:33:59,901 INFO  [TestBase] Generating random number = 9289 
+2018-11-28 11:33:59,905 INFO  [Logger] inside go2Users() method. 
+2018-11-28 11:34:02,259 INFO  [Logger] inside advancedSearchToSelectUser() method 
+2018-11-28 11:34:12,302 INFO  [Logger] Failed!! Unable to wait on this element div.panel-tools > a.btn.btn-info.advanced-search.pull-right 
+2018-11-28 11:34:22,348 INFO  [Logger] Failed!! Unable to click on an element.div.panel-tools > a.btn.btn-info.advanced-search.pull-right 
+2018-11-28 11:34:32,449 INFO  [Logger] Failed!! Unable to wait on this element #pyr_core_advanced_search_form_first_name 
+2018-11-28 11:34:42,487 INFO  [Logger] Failed!! Unable to clear the text from a textbox.#pyr_core_advanced_search_form_first_name 
+2018-11-28 11:34:52,535 INFO  [Logger] Failed!! Unable to enter a text into a textbox.#pyr_core_advanced_search_form_first_name 
+2018-11-28 11:35:02,586 INFO  [Logger] Failed!! Unable to clear the text from a textbox.#pyr_core_advanced_search_form_last_name 
+2018-11-28 11:35:12,635 INFO  [Logger] Failed!! Unable to enter a text into a textbox.#pyr_core_advanced_search_form_last_name 
+2018-11-28 11:35:22,681 INFO  [Logger] Failed!! Unable to clear the text from a textbox.#pyr_core_advanced_search_form_consultant_id 
+2018-11-28 11:35:32,726 INFO  [Logger] Failed!! Unable to enter a text into a textbox.#pyr_core_advanced_search_form_consultant_id 
+2018-11-28 11:35:42,768 INFO  [Logger] Failed!! Unable to click on an element.//*[@id='advanced-modal']/div/div[1]/div[3]/button 
+2018-11-28 11:35:52,777 INFO  [Logger] inside selectUser() method 
+2018-11-28 11:36:02,820 INFO  [Logger] Failed!! Unable to wait on this element //*[@id='users']/table[@class='table table-striped filter']/tbody 
+2018-11-28 11:36:12,871 INFO  [Logger] inside loginAsUser() Test. 
+2018-11-28 11:36:12,878 INFO  [Logger] inside loginAsUserFromAdvanced() method 
+2018-11-28 11:36:12,878 INFO  [TestBase] Generating random number in range - 1000,9999 
+2018-11-28 11:36:12,878 INFO  [TestBase] Generating random number = 1192 
+2018-11-28 11:36:12,878 INFO  [TestBase] Generating random number in range - 1000,9999 
+2018-11-28 11:36:12,878 INFO  [TestBase] Generating random number = 1245 
+2018-11-28 11:36:12,878 INFO  [TestBase] Generating random number in range - 1000,9999 
+2018-11-28 11:36:12,878 INFO  [TestBase] Generating random number = 3134 
+2018-11-28 11:36:12,878 INFO  [TestBase] Generating random number in range - 1000,9999 
+2018-11-28 11:36:12,878 INFO  [TestBase] Generating random number = 6736 
+2018-11-28 11:36:12,878 INFO  [TestBase] Generating random number in range - 1000,9999 
+2018-11-28 11:36:12,878 INFO  [TestBase] Generating random number = 3789 
+2018-11-28 11:36:12,879 INFO  [TestBase] Generating random number in range - 1000,9999 
+2018-11-28 11:36:12,879 INFO  [TestBase] Generating random number = 4085 
+2018-11-28 11:36:12,883 INFO  [Logger] inside go2Users() method. 
+2018-11-28 11:36:15,611 INFO  [Logger] inside advancedSearchToSelectUser() method 
+2018-11-28 11:36:25,653 INFO  [Logger] Failed!! Unable to wait on this element div.panel-tools > a.btn.btn-info.advanced-search.pull-right 
+2018-11-28 11:36:35,695 INFO  [Logger] Failed!! Unable to click on an element.div.panel-tools > a.btn.btn-info.advanced-search.pull-right 
+2018-11-28 11:36:45,738 INFO  [Logger] Failed!! Unable to wait on this element #pyr_core_advanced_search_form_first_name 
+2018-11-28 11:36:55,781 INFO  [Logger] Failed!! Unable to clear the text from a textbox.#pyr_core_advanced_search_form_first_name 
+2018-11-28 11:37:05,819 INFO  [Logger] Failed!! Unable to enter a text into a textbox.#pyr_core_advanced_search_form_first_name 
+2018-11-28 11:37:15,853 INFO  [Logger] Failed!! Unable to clear the text from a textbox.#pyr_core_advanced_search_form_last_name 
+2018-11-28 11:37:25,883 INFO  [Logger] Failed!! Unable to enter a text into a textbox.#pyr_core_advanced_search_form_last_name 
+2018-11-28 11:37:35,910 INFO  [Logger] Failed!! Unable to clear the text from a textbox.#pyr_core_advanced_search_form_consultant_id 
+2018-11-28 11:37:45,936 INFO  [Logger] Failed!! Unable to enter a text into a textbox.#pyr_core_advanced_search_form_consultant_id 
+2018-11-28 11:37:55,974 INFO  [Logger] Failed!! Unable to click on an element.//*[@id='advanced-modal']/div/div[1]/div[3]/button 
+2018-11-28 11:38:05,988 INFO  [Logger] inside selectUser() method 
+2018-11-28 11:38:16,035 INFO  [Logger] Failed!! Unable to wait on this element //*[@id='users']/table[@class='table table-striped filter']/tbody 
