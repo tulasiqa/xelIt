@@ -283,3 +283,89 @@
 2018-11-28 11:37:55,974 INFO  [Logger] Failed!! Unable to click on an element.//*[@id='advanced-modal']/div/div[1]/div[3]/button 
 2018-11-28 11:38:05,988 INFO  [Logger] inside selectUser() method 
 2018-11-28 11:38:16,035 INFO  [Logger] Failed!! Unable to wait on this element //*[@id='users']/table[@class='table table-striped filter']/tbody 
+2018-11-28 14:49:14,026 INFO  [Logger] inside login() method 
+2018-11-28 14:49:14,032 INFO  [Logger] inside logIn method. 
+2018-11-28 14:49:14,257 INFO  [Logger] inside login() method 
+2018-11-28 14:49:14,262 INFO  [Logger] inside logIn method. 
+2018-11-28 14:49:20,179 INFO  [Logger]  element is present 
+2018-11-28 14:49:20,200 INFO  [Logger]  element is present 
+2018-11-28 14:49:20,223 INFO  [Logger]  element is present 
+2018-11-28 14:49:20,238 INFO  [Logger] Failed!! Unable to enter a text into a textbox.//*[@id='user_login'] 
+2018-11-28 14:49:20,248 INFO  [Logger]  element is present 
+2018-11-28 14:49:20,266 INFO  [Logger] Failed!! Unable to enter a text into a textbox.//*[@id='user_password'] 
+2018-11-28 14:49:20,278 INFO  [Logger] Failed!! Unable to enter a text into a textbox.//*[@id='user_login'] 
+2018-11-28 14:49:20,302 INFO  [Logger] Failed!! Unable to enter a text into a textbox.//*[@id='user_password'] 
+2018-11-28 14:49:26,655 INFO  [Logger] inside login() method 
+2018-11-28 14:49:26,659 INFO  [Logger] inside logIn method. 
+2018-11-28 14:49:26,790 INFO  [Logger] inside loginAsUser() Test. 
+2018-11-28 14:49:26,795 INFO  [Logger] inside loginAsUserFromAdvanced() method 
+2018-11-28 14:49:26,796 INFO  [TestBase] Generating random number in range - 1000,9999 
+2018-11-28 14:49:26,796 INFO  [TestBase] Generating random number = 2594 
+2018-11-28 14:49:26,799 INFO  [TestBase] Generating random number in range - 1000,9999 
+2018-11-28 14:49:26,799 INFO  [TestBase] Generating random number = 9829 
+2018-11-28 14:49:26,800 INFO  [TestBase] Generating random number in range - 1000,9999 
+2018-11-28 14:49:26,800 INFO  [TestBase] Generating random number = 9384 
+2018-11-28 14:49:26,801 INFO  [TestBase] Generating random number in range - 1000,9999 
+2018-11-28 14:49:26,801 INFO  [TestBase] Generating random number = 9714 
+2018-11-28 14:49:26,805 INFO  [TestBase] Generating random number in range - 1000,9999 
+2018-11-28 14:49:26,805 INFO  [TestBase] Generating random number = 8814 
+2018-11-28 14:49:26,805 INFO  [TestBase] Generating random number in range - 1000,9999 
+2018-11-28 14:49:26,805 INFO  [TestBase] Generating random number = 8887 
+2018-11-28 14:49:26,808 INFO  [Logger] inside go2Users() method. 
+2018-11-28 14:49:27,996 INFO  [Logger]  element is present 
+2018-11-28 14:49:28,011 INFO  [Logger]  element is present 
+2018-11-28 14:49:28,034 INFO  [Logger] Failed!! Unable to enter a text into a textbox.//*[@id='user_login'] 
+2018-11-28 14:49:28,058 INFO  [Logger] Failed!! Unable to enter a text into a textbox.//*[@id='user_password'] 
+2018-11-28 14:49:28,933 INFO  [Logger] inside advancedSearchToSelectUser() method 
+2018-11-28 14:49:38,956 INFO  [Logger] Failed!! Unable to wait on this element div.panel-tools > a.btn.btn-info.advanced-search.pull-right 
+2018-11-28 14:49:48,975 INFO  [Logger] Failed!! Unable to click on an element.div.panel-tools > a.btn.btn-info.advanced-search.pull-right 
+2018-11-28 14:49:58,994 INFO  [Logger] Failed!! Unable to wait on this element #pyr_core_advanced_search_form_first_name 
+2018-11-28 14:50:09,014 INFO  [Logger] Failed!! Unable to clear the text from a textbox.#pyr_core_advanced_search_form_first_name 
+2018-11-28 14:50:19,028 INFO  [Logger] Failed!! Unable to enter a text into a textbox.#pyr_core_advanced_search_form_first_name 
+2018-11-28 14:50:29,086 INFO  [Logger] Failed!! Unable to clear the text from a textbox.#pyr_core_advanced_search_form_last_name 
+2018-11-28 14:50:39,103 INFO  [Logger] Failed!! Unable to enter a text into a textbox.#pyr_core_advanced_search_form_last_name 
+2018-11-28 14:50:49,132 INFO  [Logger] Failed!! Unable to clear the text from a textbox.#pyr_core_advanced_search_form_consultant_id 
+2018-11-28 14:50:59,173 INFO  [Logger] Failed!! Unable to enter a text into a textbox.#pyr_core_advanced_search_form_consultant_id 
+2018-11-28 14:51:31,732 INFO  [Logger] inside login() method 
+2018-11-28 14:51:31,739 INFO  [Logger] inside logIn method. 
+2018-11-28 14:51:32,389 INFO  [Logger] inside login() method 
+2018-11-28 14:51:32,396 INFO  [Logger] inside logIn method. 
+2018-11-28 14:51:44,779 INFO  [Logger] Failed!! Unable to wait on this element //*[@id='user_login'] 
+2018-11-28 14:51:48,387 INFO  [Logger] Failed!! Unable to wait on this element //*[@id='user_login'] 
+2018-11-28 14:51:54,813 INFO  [Logger] Failed!! Unable to enter a text into a textbox.//*[@id='user_login'] 
+2018-11-28 14:51:58,418 INFO  [Logger] Failed!! Unable to enter a text into a textbox.//*[@id='user_login'] 
+2018-11-28 14:52:04,840 INFO  [Logger] Failed!! Unable to enter a text into a textbox.//*[@id='user_password'] 
+2018-11-28 14:52:08,442 INFO  [Logger] Failed!! Unable to enter a text into a textbox.//*[@id='user_password'] 
+2018-11-28 14:52:14,877 INFO  [Logger] Failed!! Unable to click on a button.//*[@id='new_user']/div[1]/input 
+2018-11-28 14:57:29,794 INFO  [Logger] inside login() method 
+2018-11-28 14:57:29,801 INFO  [Logger] inside logIn method. 
+2018-11-28 14:57:30,844 INFO  [Logger] inside login() method 
+2018-11-28 14:57:30,849 INFO  [Logger] inside logIn method. 
+2018-11-28 14:57:42,944 INFO  [Logger] Failed!! Unable to wait on this element //*[@id='user_login'] 
+2018-11-28 14:57:44,041 INFO  [Logger] Failed!! Unable to wait on this element //*[@id='user_login'] 
+2018-11-28 14:57:52,972 INFO  [Logger] Failed!! Unable to enter a text into a textbox.//*[@id='user_login'] 
+2018-11-28 14:57:54,063 INFO  [Logger] Failed!! Unable to enter a text into a textbox.//*[@id='user_login'] 
+2018-11-28 14:58:02,998 INFO  [Logger] Failed!! Unable to enter a text into a textbox.//*[@id='user_password'] 
+2018-11-28 14:58:04,087 INFO  [Logger] Failed!! Unable to enter a text into a textbox.//*[@id='user_password'] 
+2018-11-28 14:58:13,026 INFO  [Logger] Failed!! Unable to click on a button.//*[@id='new_user']/div[1]/input 
+2018-11-28 14:58:14,122 INFO  [Logger] Failed!! Unable to click on a button.//*[@id='new_user']/div[1]/input 
+2018-11-28 14:58:28,064 INFO  [Logger] Failed!! Unable to capture confirmation message 
+2018-11-28 14:58:29,153 INFO  [Logger] Failed!! Unable to capture confirmation message 
+2018-11-28 15:00:31,702 INFO  [Logger] inside login() method 
+2018-11-28 15:00:31,712 INFO  [Logger] inside logIn method. 
+2018-11-28 15:00:32,008 INFO  [Logger] inside login() method 
+2018-11-28 15:00:32,015 INFO  [Logger] inside logIn method. 
+2018-11-28 15:00:44,816 INFO  [Logger] Failed!! Unable to wait on this element //*[@id='user_login'] 
+2018-11-28 15:00:45,106 INFO  [Logger] Failed!! Unable to wait on this element //*[@id='user_login'] 
+2018-11-28 15:00:54,859 INFO  [Logger] Failed!! Unable to enter a text into a textbox.//*[@id='user_login'] 
+2018-11-28 15:00:55,136 INFO  [Logger] Failed!! Unable to enter a text into a textbox.//*[@id='user_login'] 
+2018-11-28 15:01:04,878 INFO  [Logger] Failed!! Unable to enter a text into a textbox.//*[@id='user_password'] 
+2018-11-28 15:01:05,166 INFO  [Logger] Failed!! Unable to enter a text into a textbox.//*[@id='user_password'] 
+2018-11-28 15:01:14,902 INFO  [Logger] Failed!! Unable to click on a button.//*[@id='new_user']/div[1]/input 
+2018-11-28 15:01:15,199 INFO  [Logger] Failed!! Unable to click on a button.//*[@id='new_user']/div[1]/input 
+2018-11-28 15:01:29,957 INFO  [Logger] Failed!! Unable to capture confirmation message 
+2018-11-28 15:01:30,238 INFO  [Logger] Failed!! Unable to capture confirmation message 
+2018-11-28 15:14:11,499 INFO  [Logger] inside login() method 
+2018-11-28 15:14:11,506 INFO  [Logger] Enter login credentials 
+2018-11-28 15:14:12,126 INFO  [Logger] inside login() method 
+2018-11-28 15:14:12,132 INFO  [Logger] Enter login credentials 

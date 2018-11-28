@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [SmokeSuiteMaster]" parallel="tests">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [SmokeSuite]" parallel="tests">
   <parameter name="browser" value="firefox"/>
-  <parameter name="appUrl" value="http://monat-stage2.vibeoffice.com/"/>
+  <parameter name="appUrl" value="https://www.zagg.com/eu/en_eu/"/>
   <listeners>
     <listener class-name="org.uncommons.reportng.HTMLReporter"/>
     <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
@@ -12,58 +12,18 @@
   </listeners>
   <test name="FirefoxTest2">
     <parameter name="browser" value="firefox"/>
-    <parameter name="appUrl" value="http://monat-stage2.vibeoffice.com/"/>
+    <parameter name="appUrl" value="https://www.zagg.com/eu/en_eu/"/>
     <classes>
       <class name="common.DriverInitializerGrid"/>
-      <class name="common.LoginCredentials"/>
+      <class name="zagg.login.tests.LoginTests"/>
     </classes>
   </test> <!-- FirefoxTest2 -->
   <test name="FirefoxTest4">
     <parameter name="browser" value="firefox"/>
-    <parameter name="appUrl" value="http://monat-stage2.vibeoffice.com/"/>
+    <parameter name="appUrl" value="https://www.zagg.com/eu/en_eu/"/>
     <classes>
       <class name="common.DriverInitializerGrid"/>
-      <class name="common.LoginCredentials"/>
-      <class name="common.UserLogin"/>
+      <class name="zagg.login.tests.LoginTests"/>
     </classes>
   </test> <!-- FirefoxTest4 -->
-  <test name="FirefoxTest2(failed)" parallel="tests">
-    <parameter name="browser" value="firefox"/>
-    <parameter name="appUrl" value="http://monat-stage2.vibeoffice.com/"/>
-    <classes>
-      <class name="common.DriverInitializerGrid">
-        <methods>
-          <include name="openBrowser"/>
-          <include name="openBrowser"/>
-        </methods>
-      </class> <!-- common.DriverInitializerGrid -->
-      <class name="common.LoginCredentials">
-        <methods>
-          <include name="login"/>
-        </methods>
-      </class> <!-- common.LoginCredentials -->
-    </classes>
-  </test> <!-- FirefoxTest2(failed) -->
-  <test name="FirefoxTest4(failed)" parallel="tests">
-    <parameter name="browser" value="firefox"/>
-    <parameter name="appUrl" value="http://monat-stage2.vibeoffice.com/"/>
-    <classes>
-      <class name="common.DriverInitializerGrid">
-        <methods>
-          <include name="openBrowser"/>
-          <include name="openBrowser"/>
-        </methods>
-      </class> <!-- common.DriverInitializerGrid -->
-      <class name="common.UserLogin">
-        <methods>
-          <include name="loginAsUser"/>
-        </methods>
-      </class> <!-- common.UserLogin -->
-      <class name="common.LoginCredentials">
-        <methods>
-          <include name="login"/>
-        </methods>
-      </class> <!-- common.LoginCredentials -->
-    </classes>
-  </test> <!-- FirefoxTest4(failed) -->
-</suite> <!-- Failed suite [SmokeSuiteMaster] -->
+</suite> <!-- Failed suite [SmokeSuite] -->
