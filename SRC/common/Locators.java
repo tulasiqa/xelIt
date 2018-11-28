@@ -13,7 +13,6 @@ public class Locators {
 	public static String screenShotsPath = projectPath+"\\screenShots";
 	public static int DEFAULT_WAIT_TIME = 180;
 
-
 	public static String appUrl ="https://www.zagg.com/eu/en_eu/";
 
 
